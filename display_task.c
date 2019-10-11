@@ -35,7 +35,9 @@
 #define SCREEN_UPDATE_WATCHFACE         3
 #define SCREEN_NOTIFICATION             4
 #define SCREEN_CHARGE                   5
-#define SCREEN_TEST                     6
+#define SCREEN_MENU                     6
+
+#define SCREEN_TEST                     99
 
 PRIVILEGED_DATA bool app_task_is_initialized;
 
@@ -50,7 +52,7 @@ PRIVILEGED_DATA bool app_task_is_initialized;
 
 int app_usb_indication = 0;
 
-PRIVILEGED_DATA static OS_TIMER wake_timer;
+//PRIVILEGED_DATA static OS_TIMER wake_timer;
 static int defaultSeconds = 10;
 static int timeoutSeconds = -1;
 
@@ -59,6 +61,8 @@ int currentScreen = SCREEN_NONE;
 int queueItem = -1;
 int displayQueue[20] = {-1};
 int touched = 0;
+
+unsigned int menu_page = 0;
 
 uint8_t device_state = 0;
 //NOTE: IN hw_spi.c
@@ -85,18 +89,18 @@ void on_timer_cb()
        printf("on timeout %i\n\r",timeoutSeconds );
 }
 
-static void wake_timer_cb(OS_TIMER timer)
-{
-       timeoutSeconds --;
-
-       if (timeoutSeconds <= 0) {
-               printf("timer finished\n\r");
-               clearQueue();
-               stopWakeupTimeout();
-               displayPower(0);
-       }
-       printf("on timeout %i\n\r",timeoutSeconds );
-}
+//static void wake_timer_cb(OS_TIMER timer)
+//{
+//       timeoutSeconds --;
+//
+//       if (timeoutSeconds <= 0) {
+//               printf("timer finished\n\r");
+//               clearQueue();
+//               stopWakeupTimeout();
+//               displayPower(0);
+//       }
+//       printf("on timeout %i\n\r",timeoutSeconds );
+//}
 
 static void startWakeupTimeout() {
         if (timeoutSeconds > 0) {//OS_TIMER_IS_ACTIVE(wake_timer)) {
@@ -156,7 +160,7 @@ void clearQueue() {
 
 void display() {
         canDisplay = false;
-        printf("a\r\n");
+
         int nextDisplayItem = displayQueue[0];
 
         if (nextDisplayItem == SCREEN_NONE || queueItem < 0) {
@@ -169,7 +173,6 @@ void display() {
                // startWakeupTimeout();
         }
 
-        printf("b\r\n");
 
         switch (nextDisplayItem) {
                 case SCREEN_BOOTSCREEN:
@@ -189,19 +192,17 @@ void display() {
                         display_charging();
                         break;
                 case SCREEN_UPDATE_WATCHFACE:
-                        printf("update watchface\r\n");
                         display_watchface(true);
                         break;
-                case SCREEN_TEST:
-                        test_draw();
-                        printf("display test\r\n");
+                case SCREEN_MENU:
+                        display_menu();
+                        printf("display menu\r\n");
                         break;
                 default:
 
                 break;
 
         }
-        printf("c\r\n");
 
         //shift items to the left
         for(int i=0;i<20-1;i++)
@@ -215,6 +216,59 @@ void display() {
         if ( queueItem >= 0) { display(); }
 
         canDisplay = true;
+}
+bool touchInRect(int touchx, int touchy, int x, int y, int w, int h) {
+        if (touchx > x && touchx < (x+w) && touchy > y && touchy < (y+h)) {
+             return true;
+        }
+        return false;
+}
+void touchedCurrentScreen(uint8_t x, uint8_t y) {
+        bool touchedAction = touchInRect(x, y, 80, 80, 80, 80);
+        bool touchedback = touchInRect(x, y, 10, 80, 40, 80);
+        bool touchednext = touchInRect(x, y, 200, 80, 40, 80);
+        switch (currentScreen) {
+                case SCREEN_WATCHFACE:
+                        //temp
+                        if (touchedAction) {
+                                addToQueue(SCREEN_MENU);
+                                display();
+                        }
+                        break;
+                case SCREEN_MENU:
+                       if (menu_page == 0) {//messages
+                                if (touchedAction) {
+                                        addToQueue(SCREEN_NOTIFICATION);
+                                        addToQueue(SCREEN_MENU);
+                                        display();
+                                }
+                        } if (menu_page == 1) {//timer
+                                if (touchedAction) {
+
+                                }
+                        } if (menu_page == 2) {//back
+                                if (touchedAction) {
+                                        addToQueue(SCREEN_WATCHFACE);
+                                        display();
+                                }
+                        }
+                        //arrows
+                        if (touchedback) {
+                                printf("back menu");
+                                menu_page -= 1;
+                                if (menu_page < 0){menu_page = 2;}
+                                set_menu_page(menu_page);
+                        } else if (touchednext) {
+                                printf("next menu");
+                                menu_page += 1;
+                                if (menu_page > 2){menu_page = 0;}
+                                set_menu_page(menu_page);
+                        }
+
+                        break;
+                default:
+                        break;
+        }
 }
 
 void refreshCurrentScreen() {
@@ -232,6 +286,7 @@ void refreshCurrentScreen() {
                         break;
         }
 }
+
 int currentMin = -1;
 int currentHour = -1;
 int tickColor = 0;
@@ -265,58 +320,72 @@ void display_watchface(bool updateOnly) {
         }
 
         int padding = 5;
-        int yoffset = 65;
+        int yoffset = 55;
         int blockWidth = 40;
-        int startX = 110-40 + 8;
+        int startX = 35;//110-40 + 8;
 
         int hr = getHour();
         int min = getMinute();
-        int sec = getSecond();
-
+       // int sec = getSecond();
+        bool bold = false;
         openDevice();
-        if (hr != currentHour) {
-                displayDrawRectangleBuf(startX, startX+80, yoffset, yoffset+50, display24to16Color(0x000000));
+        if (updateOnly == false) {
+               // displayDrawCharacterNumber(startX + 80, yoffset + 50 + padding, ":", true);
+        }
+        if (hr != currentHour || min != currentMin) {
 
                 char h[2];
                 sprintf(h, "%02d", hr);
-                int width1 = displayGetWidthCharacter(h[0], true);
-                int width2 = displayGetWidthCharacter(h[1], true);
-                displayDrawCharacterNumber(startX + ((blockWidth - width1) / 2), yoffset, h[0], true);
-                displayDrawCharacterNumber((startX + blockWidth) + ((blockWidth - width2) / 2), yoffset, h[1], true);
-                currentHour = hr;
-        }
-
-        if (min != currentMin) {
-                displayDrawRectangleBuf(startX, startX+80, yoffset + 50, yoffset+100, display24to16Color(0x000000));
-
                 char m[2];
+                char semi[1];
+                semi[0]= ':';
                 sprintf(m, "%02d", min);
-                int width3 = displayGetWidthCharacter(m[0], true);
-                int width4 = displayGetWidthCharacter(m[1], true);
-                displayDrawCharacterNumber(startX + ((blockWidth - width3) / 2), yoffset + 50 + padding, m[0], true);
-                displayDrawCharacterNumber((startX + blockWidth) + ((blockWidth - width4) / 2), yoffset + 50 + padding, m[1], true);
+                int width1 = displayGetWidthClockCharacter(h[0], bold)+padding;
+                int width2 = displayGetWidthClockCharacter(h[1], bold)+padding;
+
+                int width3 = displayGetWidthClockCharacter(semi[0], bold)+padding;
+
+                int width4 = displayGetWidthClockCharacter(m[0], bold)+padding;
+                int width5 = displayGetWidthClockCharacter(m[1], bold);
+
+                int totalWidth = width1 + width2 + width3 + width4 + width5;
+                int offset = (240 - totalWidth) / 2;
+
+                displayDrawRectangleBuf(offset, offset+totalWidth, yoffset, yoffset+50, display24to16Color(0x000000));
+
+                displayDrawClockNumber(offset, yoffset, h[0], bold);
+                displayDrawClockNumber(offset + width1, yoffset, h[1], bold);
+                displayDrawClockNumber(offset + width1 + width2, yoffset, semi[0], bold);
+                displayDrawClockNumber(offset + width1 + width2 + width3, yoffset, m[0], bold);
+                displayDrawClockNumber(offset + width1 + width2 + width3 + width4, yoffset, m[1], bold);
+                currentHour = hr;
                 currentMin = min;
         }
+
 
         //display battery percentage
        char str[5];
 
 #ifndef DEVKIT_USB
        uint8_t level = (socf_get_soc() + 5) / 10;
-      // sprintf(str, "%d", level);
+       sprintf(str, "%d", level);
        int width = 0.16 * level;
 
 #else
        int width = 5;
+       sprintf(str, "%d", 35);
 #endif
 
-       int battery_y = 180;
-       int battery_x = 110;
+       int battery_y = 170;
 
        if (updateOnly == false) {
-                displayDrawStringCentered(battery_y + 15 ,2,0, str);
+                displayDrawStringCentered(battery_y ,2,0, str);
 
-                displayDrawRectangleBuff(battery_x, battery_x + 20, battery_y, battery_y + 10, display24to16Color(0x003636));
+                char d[2];
+                sprintf(getDay(), "%01d", d);
+                displayDrawString(57, 137 ,2,0, d);
+
+                /*displayDrawRectangleBuff(battery_x, battery_x + 20, battery_y, battery_y + 10, display24to16Color(0x003636));
                 displayDrawLine(battery_x + 10,battery_x + 20,battery_y + 9,battery_y + 9,display24to16Color(0x003636));
                 //tip
                 displayDrawRectangleBuff(130, battery_x + 23, battery_y + 2, battery_y + 9, display24to16Color(0x003636));
@@ -325,7 +394,14 @@ void display_watchface(bool updateOnly) {
 
 
                 displayDrawRectangleBuff(battery_x + 3 + width -1, battery_x + 18, battery_y + 2, battery_y + 8, display24to16Color(0x000000));
-                displayDrawLine(battery_x + 3 + width-1,battery_x + 18,battery_y + 7,battery_y + 7,display24to16Color(0x000000));
+                displayDrawLine(battery_x + 3 + width-1,battery_x + 18,battery_y + 7,battery_y + 7,display24to16Color(0x000000));*/
+                if (app_usb_indication != RCV_USB_CHARGING) {
+                        displayDrawCircle(120, 180, 23, display24to16Color(0x1ba569));
+                        displayDrawCircle(120, 180, 22, display24to16Color(0x1ba569));
+                } else {
+                        displayDrawCircle(120, 180, 23, display24to16Color(0x1b80a5));
+                        displayDrawCircle(120, 180, 22, display24to16Color(0x1b80a5));
+                }
 
 
         }
@@ -333,15 +409,15 @@ void display_watchface(bool updateOnly) {
         //sprintf(str2, "%d", touched);
         //displayDrawStringCentered(50 ,2,0, str2);
 
-        if (app_usb_indication != RCV_USB_CHARGING) {
+        /*if (app_usb_indication != RCV_USB_CHARGING) {
                 displayDrawRectangleBuff(battery_x + 2, battery_x + 2 + width, battery_y + 2, battery_y + 8, display24to16Color(0x8eaaad));
                 displayDrawLine(battery_x + 2,battery_x + 3 + width-1,battery_y + 7,battery_y + 7,display24to16Color(0x8eaaad));
         } else {
                displayDrawRectangleBuff(battery_x + 2, battery_x + 2 + width, battery_y + 2, battery_y + 8, display24to16Color(0xFF0000));
                displayDrawLine(battery_x + 2,battery_x + 3 + width-1,battery_y + 7, battery_y + 7,display24to16Color(0xFF0000));
-        }
+        }*/
 
-        if (sec == 0) {
+       /* if (sec == 0) {
                 if (tickStep == 1) {
                         tickColor = display24to16Color(0x8eaaad);
                         tickStep = 0;
@@ -355,39 +431,9 @@ void display_watchface(bool updateOnly) {
         }
         int angle = getSecond() * 6;
         angle -= 90;
-        displayDrawLinePolarThicknessShort(WATCH_CENTER,WATCH_CENTER, WATCH_CENTER, angle, 11, tickColor, 2);
+        displayDrawLinePolarThicknessShort(WATCH_CENTER,WATCH_CENTER, WATCH_CENTER, angle, 11, tickColor, 2);*/
         closeDevice();
         currentScreen = SCREEN_WATCHFACE;
-        finishedDisplay();
-}
-
-void getBatt() {
-        int level = read_battery_level();
-}
-
-void test_draw() {
-        openDevice();
-        displayClearBuf();
-        int tickColor;
-
-        if (tickStep == 0) {
-                tickColor = display24to16Color(0x8eaaad);
-        } else {
-                tickColor = display24to16Color(0x003636);
-        }
-        int max = (getSecond() + 1) * 6;
-        for (int i=0;i<max;i+=6) {
-                int angle = i - 90;
-                displayDrawLinePolarThicknessShort(WATCH_CENTER,WATCH_CENTER, WATCH_CENTER, angle, 11, tickColor, 2);
-        }
-        setANCSTitle("Test voor rare dingen.");
-        setANCSMessage("ABCDEFGHIJ KLMNOPQRSTUV WXYZ abcdefghij klmnopqrstuvwx yz1234567890 \"");
-        displayDrawStringCentered(20,2,0, getANCSTitle());//Ends at 35+10+5+10+5 = 65
-        displayDrawStringCentered(80,2,0, getANCSMessage());
-        closeDevice();
-
-        OS_DELAY_MS(3000);
-
         finishedDisplay();
 }
 
@@ -395,8 +441,15 @@ void display_notification(){
         currentScreen = SCREEN_NOTIFICATION;
         displayClearBuf();
         buzz(200);
-        displayDrawStringCentered(20,2,0, getANCSTitle());//Ends at 35+10+5+10+5 = 65
-        displayDrawStringCentered(80,2,0, getANCSMessage());
+        if (strlen(getANCSTitle()) >0){
+                displayDrawStringCentered(20,2,0, getANCSTitle());//Ends at 35+10+5+10+5 = 65
+                displayDrawStringCentered(80,2,0, getANCSMessage());
+        } else {
+                char title[12] = "No messages";
+                char message[18] = "No messages found";
+                displayDrawStringCentered(20,2,0, title);//Ends at 35+10+5+10+5 = 65
+                displayDrawStringCentered(80,2,0, message);
+        }
         OS_DELAY_MS(5000);
         finishedDisplay();
 }
@@ -417,7 +470,33 @@ void display_bootscreen() {
 }
 
 void display_menu() {
+        currentScreen = SCREEN_MENU;
+        displayFillScreenBuf(display24to16Color(0x42d5ad));
+        //left
+        displayPartialImageFromMemory(10,111,1, 131, 18,18,MENU_ICONS_OFFSET);
+        //right
+        displayPartialImageFromMemory(212,111,22, 131, 18,18,MENU_ICONS_OFFSET);
+        //messages
+        set_menu_page(menu_page);
+        finishedDisplay();
+}
+void set_menu_page(unsigned int page) {
+        printf("set menu page %i", page);
+        //if (page != menu_page) {
+                displayDrawRectangleBuff(90,160,90,155,display24to16Color(0x42d5ad));
+        //}
+        menu_page = page;
 
+        if (page == 0) {
+                //message
+                displayPartialImageFromMemory(90,90,130, 0, 65,58,MENU_ICONS_OFFSET);
+        } else if (page == 1) {
+                //timer
+                displayPartialImageFromMemory(90,90,67, 0, 62,63,MENU_ICONS_OFFSET);
+        } else if (page == 2) {
+                //back
+                displayPartialImageFromMemory(90,95,3, 5, 57,51,MENU_ICONS_OFFSET);
+        }
 }
 void usb_attach_cb(void)
 {
@@ -492,7 +571,7 @@ void display_task(void *params)
 
                 ret = OS_TASK_NOTIFY_WAIT(0, OS_TASK_NOTIFY_ALL_BITS, &notif, OS_TASK_NOTIFY_FOREVER);
                 OS_ASSERT(ret == OS_OK);
-                printf("got notified on loop %i \r\n", notif);
+                //printf("got notified on loop %i \r\n", notif);
 
                 /* Notified from BLE manager, can get event */
                 if (notif & SHOW_NOTIFICATION_MASK)
@@ -507,7 +586,6 @@ void display_task(void *params)
                 }
 
                 if (notif & SET_TIME_NOTIF) {
-                        printf("time\r\n");
 #ifdef CONFIG_SPI_DISPLAY
                         refreshCurrentScreen();
 #endif
@@ -521,11 +599,14 @@ void display_task(void *params)
                                 addToQueue(SCREEN_WATCHFACE);
                                 startWakeupTimeout();
                                 display();
+                        } else {
+                                //reset the timer
+                                startWakeupTimeout();
                         }
 
                         uint8_t *touchPoints = getTouch();
                         printf("touch %i %i\r\n", touchPoints[0], touchPoints[1]);
-                        displayDrawPixel(touchPoints[0], touchPoints[1],  display24to16Color(0x003636));
+                        touchedCurrentScreen(touchPoints[0], touchPoints[1]);
                 }
 
                 if (notif & UPDATE_ACCEL_MASK) {

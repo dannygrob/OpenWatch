@@ -215,7 +215,7 @@ void start_query(uint8_t *result) {
         ad_i2c_close(dev);
 }
 
-
+unsigned int hadTouch = 0;
 
 void get_touch_sample() {
       // printf("get sample\r\n");
@@ -234,10 +234,14 @@ void get_touch_sample() {
        //uint8_t y = pointData[4];
 
        //printf("Point data: %i %i %i %i %i %i % i% i\n\r", pointData[0] ,pointData[1],pointData[2],pointData[3],pointData[4],pointData[5],pointData[6], pointData[7]);
-       if (pointData[2] != 0) {
+       if (pointData[2] != 0) { //touch down
+               hadTouch = 1;
              //  printf("x: %i y: %i", pointData[2],pointData[4]);
                uint8_t points = {pointData[2],pointData[4]};
                setTouch(240-pointData[2], 240-pointData[4]);
+
+       } else { //touch up?
+               hadTouch = 0;
                OS_TASK_NOTIFY_FROM_ISR(getDisplayTaskHandle(), UPDATE_TOUCH_MASK, OS_NOTIFY_SET_BITS);
        }
        //return points;

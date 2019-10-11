@@ -14,5 +14,6 @@ void display_watchface(bool updateOnly);
 void display_bootscreen();
 void display_notification();
 void display_charging();
+void display_menu();
 
 #endif /* DISPLAY_TASK_H_ */

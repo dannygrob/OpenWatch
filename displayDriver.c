@@ -1026,36 +1026,33 @@ void displayArrayBuf(int XSTART, int WIDTH, int YSTART, int HEIGHT, int (*ARRAY)
 }
 void displayDrawCircle(int CENTER_X, int CENTER_Y, int RADIUS, int COLOR)
 {
-    int x = RADIUS-1;
-    int y = 0;
-    int dx = 1;
-    int dy = 1;
-    int err = dx-(RADIUS<<1);
+        int x = RADIUS;
+        int y = 0;
+        int err = 0;
 
-    while(x>=y)
-    {
-        displayDrawPixel(CENTER_X-y, CENTER_Y+x, COLOR);
-        displayDrawPixel(CENTER_X+y, CENTER_Y+x, COLOR);
-        displayDrawPixel(CENTER_X-x, CENTER_Y+y, COLOR);
-        displayDrawPixel(CENTER_X+x, CENTER_Y+y, COLOR);
-        displayDrawPixel(CENTER_X-x, CENTER_Y-y, COLOR);
-        displayDrawPixel(CENTER_X+x, CENTER_Y-y, COLOR);
-        displayDrawPixel(CENTER_X-y, CENTER_Y-x, COLOR);
-        displayDrawPixel(CENTER_X+y, CENTER_Y-x, COLOR);
+        while (x >= y)
+        {
+                displayDrawPixel(CENTER_X + x, CENTER_Y + y, COLOR);
+                displayDrawPixel(CENTER_X + y, CENTER_Y + x, COLOR);
+                displayDrawPixel(CENTER_X - y, CENTER_Y + x, COLOR);
+                displayDrawPixel(CENTER_X - x, CENTER_Y + y, COLOR);
+                displayDrawPixel(CENTER_X - x, CENTER_Y - y, COLOR);
+                displayDrawPixel(CENTER_X - y, CENTER_Y - x, COLOR);
+                displayDrawPixel(CENTER_X + y, CENTER_Y - x, COLOR);
+                displayDrawPixel(CENTER_X + x, CENTER_Y - y, COLOR);
 
-        if(err <=0)
-        {
-            y++;
-            err += dy;
-            dy += 2;
+                if (err <= 0)
+                {
+                    y += 1;
+                    err += 2*y + 1;
+                }
+
+                if (err > 0)
+                {
+                    x -= 1;
+                    err -= 2*x + 1;
+                }
         }
-        else
-        {
-            x--;
-            dx += 2;
-            err += dx -(RADIUS<<1);
-        }
-    }
 }
 void displayTestPattern(void)
 {

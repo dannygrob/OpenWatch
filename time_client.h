@@ -13,6 +13,8 @@
 void setHour(int hr);
 void setMinute(int min);
 void setSecond(int sec);
+int getDay();
+int getMonth();
 void setDate(char *date);
 cts_current_time_t getTime();
 void stopTimeClient();

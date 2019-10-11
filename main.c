@@ -165,18 +165,18 @@ static void system_init( void *pvParameters )
                        mainDISPLAY_TASK_PRIORITY,         /* The priority assigned to the task. */
                        handle1);                            /* The task handle. */
         OS_ASSERT(handle1);
-
+#ifndef DEVKIT_USB
         /* Start the LIS3DH application task. */
-//        OS_TASK_CREATE("LIS3DH Task",                     /* The text name assigned to the task, for
-//                                                              debug only; not used by the kernel. */
-//                       lis3dh_task,                          /* The function that implements the task. */
-//                       NULL,                               /* The parameter passed to the task. */
-//                       1024,                               /* The number of bytes to allocate to the
-//                                                              stack of the task. */
-//                       mainLIS3DH_TASK_PRIORITY,         /* The priority assigned to the task. */
-//                       handle2);                            /* The task handle. */
+        OS_TASK_CREATE("LIS3DH Task",                     /* The text name assigned to the task, for
+                                                              debug only; not used by the kernel. */
+                       lis3dh_task,                          /* The function that implements the task. */
+                       NULL,                               /* The parameter passed to the task. */
+                       1024,                               /* The number of bytes to allocate to the
+                                                              stack of the task. */
+                       mainLIS3DH_TASK_PRIORITY,         /* The priority assigned to the task. */
+                       handle2);                            /* The task handle. */
 //        OS_ASSERT(handle2);
-
+#endif
 //        /* Start the Touch application task. */
         OS_TASK_CREATE("Touch Task",                     /* The text name assigned to the task, for                                                              debug only; not used by the kernel. */
                        touch_task,                          /* The function that implements the task. */
@@ -282,7 +282,7 @@ static void periph_init(void)
         hw_gpio_set_pin_function(HW_GPIO_PORT_1,HW_GPIO_PIN_2, HW_GPIO_MODE_OUTPUT, HW_GPIO_FUNC_GPIO);
 #else
         hw_gpio_configure_pin(HW_GPIO_PORT_3, HW_GPIO_PIN_1, HW_GPIO_MODE_INPUT_PULLDOWN, HW_GPIO_FUNC_GPIO, true);
-        hw_gpio_configure_pin(HW_GPIO_PORT_3, HW_GPIO_PIN_2, HW_GPIO_MODE_INPUT_PULLDOWN, HW_GPIO_FUNC_GPIO, true
+        hw_gpio_configure_pin(HW_GPIO_PORT_3, HW_GPIO_PIN_2, HW_GPIO_MODE_INPUT_PULLDOWN, HW_GPIO_FUNC_GPIO, true);
 
 #endif
 

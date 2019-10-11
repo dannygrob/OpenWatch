@@ -42,6 +42,7 @@ static void on_timer_cb(OS_TIMER timer)
         }
         if (cts_time.date_time.hours > 23) {
                 cts_time.date_time.hours -= 24;
+                cts_time.date_time.day += 1;
         }
 
         if (pm_get_sleep_mode() != pm_mode_extended_sleep) {
@@ -74,21 +75,37 @@ void setMinute(int min) {
 void setSecond(int sec) {
         cts_time.date_time.seconds = sec;
 }
+void setDay(int day) {
+        cts_time.date_time.day = day;
+}
 void setDate(char *date) {
         //20190924T000907
+        char daystr[2];
+        char monthstr[2];
         char hrstr[2];
         char mnstr[2];
         char scstr[2];
         strncpy(hrstr, date + 9, 2);
         strncpy(mnstr, date + 11, 2);
         strncpy(scstr, date + 13, 2);
+        strncpy(daystr, date + 6, 2);
+        strncpy(monthstr, date + 4, 2);
 
         setHour(atoi(hrstr));
         setMinute(atoi(mnstr));
         setSecond(atoi(scstr));
+
+        setDay(atoi(daystr));
+        cts_time.date_time.month = atoi(monthstr);
 }
 cts_current_time_t getTime() {
         return cts_time;
+}
+int getDay() {
+        return cts_time.date_time.day;
+}
+int getMonth() {
+        return cts_time.date_time.month;
 }
 int getHour() {
         return cts_time.date_time.hours;
