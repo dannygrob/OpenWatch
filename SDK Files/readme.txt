@@ -1,0 +1,1 @@
+Files here are in the shared SDK folder. Copy them to the correct locations!
