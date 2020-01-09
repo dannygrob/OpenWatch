@@ -1,5 +1,5 @@
 # OpenWatch
-Open source watch based on [https://github.com/S-March/smarchWatch_PUBLIC](smarchWatch), da14683 ic
+Open source watch based on [https://github.com/S-March/smarchWatch_PUBLIC](smarchWatch), da14683 ic. It uses some files Samson wrote, but most are heavily changed or created by me. I did not want to fork it, since it's a different watch (on the same pcb but with touch connector). Also started this repo just for myself but decided to share it.
 
 ![Picture of the watch and os](https://www.digitalfactor.nl/watch/watch.jpg)
 
@@ -16,4 +16,4 @@ Follow the [getting started guide found here](https://www.dialog-semiconductor.c
 Connect a J-Link mini or similar to the pads, and don't forget to connect VREF to VBAT somewhere on the board.
 For debugging connect the RX TX too. Maybe best to start with the [Development Kit USB](https://www.dialog-semiconductor.com/products/da14683-development-kit-usb)
 
-You can use Smart Snipets Toolbox (after running the code once, it creates the partitions on flash) to load the images to the flash partition (NVMS_FLASH_STORAGE).
+You can use Smart Snipets Toolbox (after running the code once, it creates the partitions on flash) to load the images (picturefiles.txt) to the flash partition (NVMS_FLASH_STORAGE). These where created with Samson's biptmap loader tool found in the original git.
