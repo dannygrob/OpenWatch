@@ -1,0 +1,3 @@
+Change Net Name : Old Net Name=NetX?_7 New Net Name=I2C_SDA
+Change Net Name : Old Net Name=NetX?_9 New Net Name=I2C_SCL
+Change Net Name : Old Net Name=NetX?_10 New Net Name=INT_TOUCH

@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [smarchWatch_V5.PcbDoc]
+   Generated File[smarchWatch_V5.TXT]
+   Generated File[smarchWatch_V5.LDP]
+   Generated File[smarchWatch_V5.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 1:18:50 PM On 1/13/2020

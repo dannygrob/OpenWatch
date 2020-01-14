@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=3V3 Pin=X?-2
+Removed Pin From Net: NetName=I2C_SDA Pin=X?-7
+Removed Pin From Net: NetName=I2C_SCL Pin=X?-9
+Removed Pin From Net: NetName=INT_TOUCH Pin=X?-10
+Added Pin To Net: NetName=GND Pin=X?-1
+Added Pin To Net: NetName=INT_TOUCH Pin=X?-2
+Added Pin To Net: NetName=I2C_SDA Pin=X?-4
+Added Pin To Net: NetName=I2C_SCL Pin=X?-5
+Added Pin To Net: NetName=GND Pin=X?-6
+Added Pin To Net: NetName=3V3 Pin=X?-7
+Added Pin To Net: NetName=GND Pin=X?-8
+Added Pin To Net: NetName=3V3 Pin=X?-9
+Added Pin To Net: NetName=GND Pin=X?-10

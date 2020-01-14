@@ -1,0 +1,7 @@
+DRC Rules Export File for PCB: C:\Users\prog\Desktop\Watch\Altium Files\smarchWatch_V5.PcbDoc
+RuleKind=Clearance|RuleName=Clearance_ANT|Scope=Board|Minimum=78.74
+RuleKind=Clearance|RuleName=Clearance_Castellated|Scope=Board|Minimum=0.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=4.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00

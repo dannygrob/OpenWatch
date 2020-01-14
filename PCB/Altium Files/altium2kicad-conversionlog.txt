@@ -1,0 +1,413 @@
+Archive:  db/5355.zip
+  inflating: db/5355/Actuators.SchDoc  
+  inflating: db/5355/BLE.SchDoc      
+  inflating: db/5355/Display.SchDoc  
+  inflating: db/5355/Main.SchDoc     
+  inflating: db/5355/Power.SchDoc    
+  inflating: db/5355/Sensors.SchDoc  
+  inflating: db/5355/smarchWatch_V5.BomDoc  
+  inflating: db/5355/smarchWatch_V5.OutJob  
+  inflating: db/5355/smarchWatch_V5.PcbDoc  
+  inflating: db/5355/smarchWatch_V5.PrjPcb  
+  inflating: db/5355/smarchWatch_V5.PrjPcbStructure  
+Loading Actuators.SchDoc
+
+Loading BLE.SchDoc
+
+Loading Display.SchDoc
+
+Loading Main.SchDoc
+
+Loading Power.SchDoc
+
+Loading Sensors.SchDoc
+
+Loading smarchWatch_V5.PcbDoc
+
+Done.
+Handling Actuators-SchDoc/Root Entry/FileHeader.dat
+Unhandled Record type without: 2  (#40)
+Unhandled Record type without: 2  (#42)
+This circle/arc is not part of a component, but KiCad does not support that. As a workaround we are creating a dummy component.
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+Error: No ERC without position !  |LINENO=68||RECORD=22|IndexInSheet=52|OwnerPartId=-1|Location.X=345|Location.Y=430|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=SFFLRJFS
+Error: No ERC without position !  |LINENO=69||RECORD=22|IndexInSheet=53|OwnerPartId=-1|Location.X=605|Location.Y=520|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=PAWUNZWO
+Unhandled Record type without: 2  (#82)
+Unhandled Record type without: 2  (#84)
+Unhandled Record type without: 2  (#86)
+Unhandled Record type without: 2  (#88)
+Unhandled Record type without: 2  (#90)
+Unhandled Record type without: 2  (#92)
+Unhandled Record type without: 2  (#94)
+Unhandled Record type without: 2  (#96)
+Unhandled Record type without: 2  (#136)
+Unhandled Record type without: 2  (#138)
+Unhandled Record type without: 2  (#155)
+Unhandled Record type without: 2  (#157)
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+Unhandled Record type without: 2  (#186)
+Unhandled Record type without: 2  (#188)
+Unhandled Record type without: 2  (#190)
+Unhandled Record type without: 2  (#192)
+Unhandled Record type without: 2  (#194)
+Unhandled Record type without: 2  (#196)
+Unhandled Record type without: 2  (#198)
+Unhandled Record type without: 2  (#200)
+Unhandled Record type without: 2  (#202)
+Unhandled Record type without: 2  (#204)
+Unhandled Record type without: 2  (#206)
+Unhandled Record type without: 2  (#208)
+Unhandled Record type without: 2  (#210)
+Unhandled Record type without: 2  (#212)
+Unhandled Record type without: 2  (#214)
+Unhandled Record type without: 2  (#216)
+Unhandled Record type without: 2  (#218)
+Unhandled Record type without: 2  (#220)
+Unhandled Record type without: 2  (#230)
+Unhandled Record type without: 2  (#232)
+Unhandled Record type without: 2  (#248)
+Unhandled Record type without: 2  (#250)
+Handling BLE-SchDoc/Root Entry/FileHeader.dat
+Unhandled Record type without: 2  (#41)
+Unhandled Record type without: 2  (#43)
+Unhandled Record type without: 2  (#45)
+Unhandled Record type without: 2  (#47)
+Unhandled Record type without: 2  (#49)
+Unhandled Record type without: 2  (#51)
+Unhandled Record type without: 2  (#53)
+Unhandled Record type without: 2  (#55)
+Unhandled Record type without: 2  (#92)
+Unhandled Record type without: 2  (#94)
+Unhandled Record type without: 2  (#121)
+Unhandled Record type without: 2  (#123)
+Unhandled Record type without: 2  (#145)
+Unhandled Record type without: 2  (#147)
+Unhandled Record type without: 2  (#166)
+Unhandled Record type without: 2  (#168)
+Unhandled Record type without: 2  (#190)
+Unhandled Record type without: 2  (#192)
+Unhandled Record type without: 2  (#213)
+Unhandled Record type without: 2  (#215)
+Unhandled Record type without: 2  (#234)
+Unhandled Record type without: 2  (#236)
+Unhandled Record type without: 2  (#271)
+Unhandled Record type without: 2  (#273)
+Unhandled Record type without: 2  (#294)
+Unhandled Record type without: 2  (#296)
+Unhandled Record type without: 2  (#315)
+Unhandled Record type without: 2  (#317)
+Unhandled Record type without: 2  (#343)
+Unhandled Record type without: 2  (#345)
+Unhandled Record type without: 2  (#367)
+Unhandled Record type without: 2  (#369)
+Error: No ERC without position !  |LINENO=397||RECORD=22|IndexInSheet=128|OwnerPartId=-1|Location.X=200|Location.Y=150|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=SCRABDOE
+Error: No ERC without position !  |LINENO=398||RECORD=22|IndexInSheet=129|OwnerPartId=-1|Location.X=200|Location.Y=140|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=KIPODXKP
+Unhandled Record type without: 2  (#400)
+Unhandled Record type without: 2  (#402)
+Unhandled Record type without: 2  (#421)
+Unhandled Record type without: 2  (#423)
+Unhandled Record type without: 2  (#441)
+Unhandled Record type without: 2  (#443)
+Unhandled Record type without: 2  (#492)
+Unhandled Record type without: 2  (#494)
+Unhandled Record type without: 2  (#496)
+Unhandled Record type without: 2  (#498)
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+Unhandled Record type without: 2  (#529)
+Unhandled Record type without: 2  (#531)
+Error: No ERC without position !  |LINENO=548||RECORD=22|IndexInSheet=191|OwnerPartId=-1|Location.X=490|Location.Y=200|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=GQLEGVTE
+Error: No ERC without position !  |LINENO=549||RECORD=22|IndexInSheet=192|OwnerPartId=-1|Location.X=490|Location.Y=180|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=LDTXLNGJ
+Error: No ERC without position !  |LINENO=554||RECORD=22|IndexInSheet=197|OwnerPartId=-1|Location.X=490|Location.Y=260|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=CXTTPFCG
+Error: No ERC without position !  |LINENO=555||RECORD=22|IndexInSheet=198|OwnerPartId=-1|Location.X=490|Location.Y=250|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=WIQTXMIF
+Error: No ERC without position !  |LINENO=558||RECORD=22|IndexInSheet=201|OwnerPartId=-1|Location.X=490|Location.Y=280|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=UENVZZXS
+Error: No ERC without position !  |LINENO=559||RECORD=22|IndexInSheet=202|OwnerPartId=-1|Location.X=490|Location.Y=270|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=IYXEXPWA
+Error: No ERC without position !  |LINENO=561||RECORD=22|IndexInSheet=204|OwnerPartId=-1|Location.X=490|Location.Y=290|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=BNRXXOTP
+Error: No ERC without position !  |LINENO=563||RECORD=22|IndexInSheet=206|OwnerPartId=-1|Location.X=490|Location.Y=340|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=TIAOVCGG
+Error: No ERC without position !  |LINENO=565||RECORD=22|IndexInSheet=208|OwnerPartId=-1|Location.X=490|Location.Y=320|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=DGXBEZZU
+Error: No ERC without position !  |LINENO=569||RECORD=22|IndexInSheet=212|OwnerPartId=-1|Location.X=490|Location.Y=430|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=JFBMABUD
+Error: No ERC without position !  |LINENO=570||RECORD=22|IndexInSheet=213|OwnerPartId=-1|Location.X=490|Location.Y=420|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=RORHNQZK
+Error: No ERC without position !  |LINENO=572||RECORD=22|IndexInSheet=215|OwnerPartId=-1|Location.X=490|Location.Y=440|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=QYVFLALO
+Error: No ERC without position !  |LINENO=574||RECORD=22|IndexInSheet=217|OwnerPartId=-1|Location.X=490|Location.Y=450|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=FMJIYKPS
+Error: No ERC without position !  |LINENO=577||RECORD=22|IndexInSheet=220|OwnerPartId=-1|Location.X=490|Location.Y=470|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=VTZWOPYF
+Error: No ERC without position !  |LINENO=579||RECORD=22|IndexInSheet=222|OwnerPartId=-1|Location.X=490|Location.Y=500|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=LDOMFXJQ
+Unhandled Record type without: 2  (#594)
+Unhandled Record type without: 2  (#596)
+Unhandled Record type without: 2  (#598)
+Unhandled Record type without: 2  (#600)
+Unhandled Record type without: 2  (#602)
+Unhandled Record type without: 2  (#604)
+Unhandled Record type without: 2  (#606)
+Unhandled Record type without: 2  (#608)
+Unhandled Record type without: 2  (#610)
+Unhandled Record type without: 2  (#612)
+Unhandled Record type without: 2  (#614)
+Unhandled Record type without: 2  (#616)
+Unhandled Record type without: 2  (#618)
+Unhandled Record type without: 2  (#620)
+Unhandled Record type without: 2  (#622)
+Unhandled Record type without: 2  (#624)
+Unhandled Record type without: 2  (#626)
+Unhandled Record type without: 2  (#628)
+Unhandled Record type without: 2  (#630)
+Unhandled Record type without: 2  (#632)
+Unhandled Record type without: 2  (#634)
+Unhandled Record type without: 2  (#636)
+Unhandled Record type without: 2  (#638)
+Unhandled Record type without: 2  (#640)
+Unhandled Record type without: 2  (#642)
+Unhandled Record type without: 2  (#644)
+Unhandled Record type without: 2  (#646)
+Unhandled Record type without: 2  (#648)
+Unhandled Record type without: 2  (#650)
+Unhandled Record type without: 2  (#652)
+Unhandled Record type without: 2  (#654)
+Unhandled Record type without: 2  (#656)
+Unhandled Record type without: 2  (#658)
+Unhandled Record type without: 2  (#660)
+Unhandled Record type without: 2  (#662)
+Unhandled Record type without: 2  (#664)
+Unhandled Record type without: 2  (#666)
+Unhandled Record type without: 2  (#668)
+Unhandled Record type without: 2  (#670)
+Unhandled Record type without: 2  (#672)
+Unhandled Record type without: 2  (#674)
+Unhandled Record type without: 2  (#676)
+Unhandled Record type without: 2  (#678)
+Unhandled Record type without: 2  (#680)
+Unhandled Record type without: 2  (#682)
+Unhandled Record type without: 2  (#684)
+Unhandled Record type without: 2  (#686)
+Unhandled Record type without: 2  (#688)
+Unhandled Record type without: 2  (#690)
+Unhandled Record type without: 2  (#692)
+Unhandled Record type without: 2  (#694)
+Unhandled Record type without: 2  (#696)
+Unhandled Record type without: 2  (#698)
+Unhandled Record type without: 2  (#700)
+Unhandled Record type without: 2  (#702)
+Unhandled Record type without: 2  (#704)
+Unhandled Record type without: 2  (#706)
+Unhandled Record type without: 2  (#708)
+Unhandled Record type without: 2  (#710)
+Unhandled Record type without: 2  (#712)
+Unhandled Record type without: 2  (#714)
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+Unhandled Record type without: 2  (#728)
+Unhandled Record type without: 2  (#738)
+Unhandled Record type without: 2  (#750)
+Unhandled Record type without: 2  (#760)
+Unhandled Record type without: 2  (#773)
+Unhandled Record type without: 2  (#786)
+Unhandled Record type without: 2  (#796)
+Unhandled Record type without: 2  (#817)
+Unhandled Record type without: 2  (#819)
+Unhandled Record type without: 2  (#834)
+Unhandled Record type without: 2  (#836)
+Unhandled Record type without: 2  (#855)
+Unhandled Record type without: 2  (#857)
+Unhandled Record type without: 2  (#882)
+Error: No ERC without position !  |LINENO=894||RECORD=22|IndexInSheet=277|OwnerPartId=-1|Location.X=490|Location.Y=380|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=HJWXARXT
+Handling Display-SchDoc/Root Entry/FileHeader.dat
+Unhandled Record type without: 2  (#40)
+Unhandled Record type without: 2  (#42)
+Unhandled Record type without: 2  (#44)
+Unhandled Record type without: 2  (#46)
+Unhandled Record type without: 2  (#48)
+Unhandled Record type without: 2  (#50)
+Unhandled Record type without: 2  (#52)
+Unhandled Record type without: 2  (#54)
+Unhandled Record type without: 2  (#56)
+Unhandled Record type without: 2  (#58)
+Unhandled Record type without: 2  (#60)
+Unhandled Record type without: 2  (#62)
+Unhandled Record type without: 2  (#64)
+Unhandled Record type without: 2  (#66)
+Unhandled Record type without: 2  (#68)
+Unhandled Record type without: 2  (#70)
+Unhandled Record type without: 2  (#72)
+Unhandled Record type without: 2  (#74)
+Unhandled Record type without: 2  (#85)
+Unhandled Record type without: 2  (#87)
+This circle/arc is not part of a component, but KiCad does not support that. As a workaround we are creating a dummy component.
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+Error: No ERC without position !  |LINENO=116||RECORD=22|IndexInSheet=56|OwnerPartId=-1|Location.X=205|Location.Y=395|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=SFFLRJFS
+Error: No ERC without position !  |LINENO=117||RECORD=22|IndexInSheet=57|OwnerPartId=-1|Location.X=390|Location.Y=485|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=PAWUNZWO
+Handling Main-SchDoc/Root Entry/FileHeader.dat
+Handling Power-SchDoc/Root Entry/FileHeader.dat
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+Unhandled Record type without: 2  (#42)
+Unhandled Record type without: 2  (#44)
+Unhandled Record type without: 2  (#46)
+Unhandled Record type without: 2  (#48)
+Unhandled Record type without: 2  (#50)
+Unhandled Record type without: 2  (#52)
+Unhandled Record type without: 2  (#62)
+Unhandled Record type without: 2  (#64)
+Unhandled Record type without: 2  (#66)
+Unhandled Record type without: 2  (#68)
+Unhandled Record type without: 2  (#70)
+Unhandled Record type without: 2  (#72)
+Unhandled Record type without: 2  (#74)
+Unhandled Record type without: 2  (#76)
+Unhandled Record type without: 2  (#114)
+Unhandled Record type without: 2  (#116)
+Unhandled Record type without: 2  (#133)
+Unhandled Record type without: 2  (#135)
+Unhandled Record type without: 2  (#154)
+Unhandled Record type without: 2  (#156)
+Error: No ERC without position !  |LINENO=174||RECORD=22|IndexInSheet=52|OwnerPartId=-1|Location.X=565|Location.Y=345|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=ELZIAFNV
+Unhandled Record type without: 2  (#176)
+Unhandled Record type without: 2  (#178)
+Unhandled Record type without: 2  (#197)
+Unhandled Record type without: 2  (#199)
+Unhandled Record type without: 2  (#229)
+Unhandled Record type without: 2  (#231)
+Unhandled Record type without: 2  (#247)
+Unhandled Record type without: 2  (#249)
+Unhandled Record type without: 2  (#272)
+Unhandled Record type without: 2  (#274)
+Unhandled Record type without: 2  (#289)
+Unhandled Record type without: 2  (#292)
+Unhandled Record type without: 2  (#302)
+Unhandled Record type without: 2  (#304)
+Unhandled Record type without: 7  (#306)
+Unhandled Record type without: 7  (#312)
+Handling Sensors-SchDoc/Root Entry/FileHeader.dat
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+Unhandled Record type without: 2  (#52)
+Unhandled Record type without: 2  (#54)
+Unhandled Record type without: 2  (#73)
+Unhandled Record type without: 2  (#75)
+Unhandled Record type without: 2  (#94)
+Unhandled Record type without: 2  (#96)
+Unhandled Record type without: 2  (#98)
+Unhandled Record type without: 2  (#100)
+Unhandled Record type without: 2  (#102)
+Unhandled Record type without: 2  (#104)
+Unhandled Record type without: 2  (#106)
+Unhandled Record type without: 2  (#108)
+Unhandled Record type without: 2  (#110)
+Unhandled Record type without: 2  (#112)
+Unhandled Record type without: 2  (#114)
+Unhandled Record type without: 2  (#116)
+Unhandled Record type without: 2  (#118)
+Unhandled Record type without: 2  (#120)
+Unhandled Record type without: 2  (#122)
+Unhandled Record type without: 2  (#124)
+Error: No ERC without position !  |LINENO=137||RECORD=22|IndexInSheet=62|OwnerPartId=-1|Location.X=425|Location.Y=470|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=VVGRMCXU
+Error: No ERC without position !  |LINENO=138||RECORD=22|IndexInSheet=63|OwnerPartId=-1|Location.X=425|Location.Y=460|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=KOKTSHZL
+Error: No ERC without position !  |LINENO=139||RECORD=22|IndexInSheet=64|OwnerPartId=-1|Location.X=425|Location.Y=450|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=GMMDXBIB
+Error: No ERC without position !  |LINENO=140||RECORD=22|IndexInSheet=65|OwnerPartId=-1|Location.X=425|Location.Y=430|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=RCUAUGDQ
+Error: No ERC without position !  |LINENO=141||RECORD=22|IndexInSheet=66|OwnerPartId=-1|Location.X=425|Location.Y=420|Color=255|Orientation=1|Symbol=Thin Cross|IsActive=T|SuppressAll=T|UniqueID=SAWKDOCT
+Unhandled Record type without: 2  (#143)
+Unhandled Record type without: 2  (#145)
+Unhandled Record type without: 2  (#164)
+Unhandled Record type without: 2  (#166)
+WARNING: Port orientation may be incorrect and thus unconnected - ports on the 'left' of wires may need moving and orientation flipping
+Handling smarchWatch_V5-PcbDoc/Root Entry/FileHeader.dat
+Handling Actuators.SchDoc
+Handling BLE.SchDoc
+Handling Display.SchDoc
+Handling Main.SchDoc
+Handling Power.SchDoc
+Handling Sensors.SchDoc
+Handling smarchWatch_V5-PcbDoc/Root Entry/Board6/Data.dat
+ASCII-smarchWatch_V5-PcbDoc.PcbDoc exists?
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Board6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Models/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/UniqueIDPrimitiveInformation/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Rules6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Classes6/Data.dat.txt
+Writing PCB to smarchWatch_V5-PcbDoc.kicad_pcb
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Nets6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Components6/Data.dat.txt
+Pads6...
+Writing to smarchWatch_V5-PcbDoc/Root Entry/ComponentBodies6/Data.dat.txt
+NOT FOUND: displayAssembly.wrl
+NOT FOUND: DF37NB-24DS-04V.wrl
+NOT FOUND: pcb_connector_800-10-002-30-507101.wrl
+NOT FOUND: RJD2430C1ST1.wrl
+NOT FOUND: LIS3DH v4.wrl
+NOT FOUND: C0720B001F v18.wrl
+NOT FOUND: 7M-16.000MEEQ-T v5.wrl
+NOT FOUND: 9HT11-32.768KDZB-T v3.wrl
+NOT FOUND: DA14683 v6.wrl
+NOT FOUND: SODFL100X40-2N.wrl
+NOT FOUND: SON65P230X95-8N.wrl
+NOT FOUND: SON127P600X80_HS-9N.wrl
+NOT FOUND: SON50P150X80-6N.wrl
+Writing to smarchWatch_V5-PcbDoc/Root Entry/ShapeBasedComponentBodies6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Components6/Data.dat.txt
+Where did the model come from? componentid: 0
+Where did the model come from? componentid: 1
+Where did the model come from? componentid: 2
+Where did the model come from? componentid: 3
+Where did the model come from? componentid: 4
+Where did the model come from? componentid: 5
+Where did the model come from? componentid: 7
+Where did the model come from? componentid: 8
+Where did the model come from? componentid: 9
+Where did the model come from? componentid: 10
+Where did the model come from? componentid: 18
+Where did the model come from? componentid: 19
+Where did the model come from? componentid: 20
+Where did the model come from? componentid: 21
+Where did the model come from? componentid: 22
+Where did the model come from? componentid: 23
+Where did the model come from? componentid: 24
+Where did the model come from? componentid: 25
+Where did the model come from? componentid: 26
+Where did the model come from? componentid: 27
+Where did the model come from? componentid: 28
+Where did the model come from? componentid: 29
+Where did the model come from? componentid: 30
+Where did the model come from? componentid: 31
+Where did the model come from? componentid: 32
+Where did the model come from? componentid: 33
+Where did the model come from? componentid: 34
+Where did the model come from? componentid: 35
+Where did the model come from? componentid: 36
+Where did the model come from? componentid: 37
+Where did the model come from? componentid: 38
+Where did the model come from? componentid: 39
+Where did the model come from? componentid: 40
+Where did the model come from? componentid: 41
+Where did the model come from? componentid: 42
+Where did the model come from? componentid: 43
+Where did the model come from? componentid: 44
+Where did the model come from? componentid: 45
+Where did the model come from? componentid: 46
+Where did the model come from? componentid: 47
+Where did the model come from? componentid: 48
+Where did the model come from? componentid: 49
+Where did the model come from? componentid: 50
+Where did the model come from? componentid: 51
+Where did the model come from? componentid: 52
+Where did the model come from? componentid: 53
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Arcs6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Vias6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Polygons6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Tracks6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/FileVersionInfo/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Fills6/Data.dat.txt
+Writing to smarchWatch_V5-PcbDoc/Root Entry/Regions6/Data.dat.txt
+Texts6...

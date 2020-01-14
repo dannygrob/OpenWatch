@@ -1,0 +1,348 @@
+RECORD=-42|LINENO=   0|OWNERPARTID= -42|OWNERINDEX= -42|HEADER=Protel for Windows - Schematic Capture Binary File Version 5.0|MinorVersion=2|UniqueID=LSHXHLKF|Weight=347|
+RECORD=31|LINENO=   1|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=16317695|Bold2=T|Bold3=T|BorderOn=T|CustomX=1000|CustomY=800|Display_Unit=0|FontIdCount=4|FontName1=Times New Roman|FontName2=Arial Narrow|FontName3=Arial Narrow|FontName4=Times New Roman|HotSpotGridOn=T|HotSpotGridSize=3|IsBOC=T|SheetNumberSpaceSize=12|SheetStyle=5|ShowTemplateGraphics=T|Size1=10|Size2=72|Size3=26|Size4=6|SnapGridOn=T|SnapGridSize=5|SystemFont=1|UseMBCS=T|VisibleGridOn=T|VisibleGridSize=10|
+RECORD=41|LINENO=   2|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Name=CurrentTime|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=GTESSMJA|
+RECORD=41|LINENO=   3|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=1|IsHidden=T|Name=CurrentDate|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=OBGMHBKR|
+RECORD=41|LINENO=   4|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=2|IsHidden=T|Name=Time|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=PMTOBWVQ|
+RECORD=41|LINENO=   5|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=3|IsHidden=T|Name=Date|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=BMOGFYNM|
+RECORD=41|LINENO=   6|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=4|IsHidden=T|Name=DocumentFullPathAndName|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=UHBOMEKW|
+RECORD=41|LINENO=   7|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=5|IsHidden=T|Name=DocumentName|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=NUTYOMWA|
+RECORD=41|LINENO=   8|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=6|IsHidden=T|Name=ModifiedDate|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=HHMXLGLW|
+RECORD=41|LINENO=   9|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=7|IsHidden=T|Name=ApprovedBy|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=MKKSTOPX|
+RECORD=41|LINENO=  10|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=8|IsHidden=T|Name=CheckedBy|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=JWRYQXFH|
+RECORD=41|LINENO=  11|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=9|IsHidden=T|Name=Author|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=MUSSOKVT|
+RECORD=41|LINENO=  12|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=10|IsHidden=T|Name=CompanyName|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=VGTBWOAD|
+RECORD=41|LINENO=  13|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=11|IsHidden=T|Name=DrawnBy|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=BUCDNUYY|
+RECORD=41|LINENO=  14|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=12|IsHidden=T|Name=Engineer|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=VMIIUHMP|
+RECORD=41|LINENO=  15|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=13|IsHidden=T|Name=Organization|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=ECBCXOPT|
+RECORD=41|LINENO=  16|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=14|IsHidden=T|Name=Address1|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=GKUCLOSK|
+RECORD=41|LINENO=  17|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=15|IsHidden=T|Name=Address2|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=EQLNHEAA|
+RECORD=41|LINENO=  18|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=16|IsHidden=T|Name=Address3|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=RTPHANIG|
+RECORD=41|LINENO=  19|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=17|IsHidden=T|Name=Address4|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=ICSFEUDH|
+RECORD=41|LINENO=  20|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=18|IsHidden=T|Name=Title|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=YSGQMMXY|
+RECORD=41|LINENO=  21|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=19|IsHidden=T|Name=DocumentNumber|OwnerPartId=-1|ReadOnlyState=1|Text=2|UniqueID=MHCQSGVU|
+RECORD=41|LINENO=  22|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=20|IsHidden=T|Name=Revision|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=XKPQLLXO|
+RECORD=41|LINENO=  23|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=21|IsHidden=T|Name=SheetNumber|OwnerPartId=-1|ReadOnlyState=1|Text=2|UniqueID=WPQYPBDG|
+RECORD=41|LINENO=  24|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=22|IsHidden=T|Name=SheetTotal|OwnerPartId=-1|ReadOnlyState=1|Text=5|UniqueID=CCCKRHEX|
+RECORD=41|LINENO=  25|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=23|IsHidden=T|Name=Rule|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=RNQYIXGU|
+RECORD=41|LINENO=  26|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=24|IsHidden=T|Name=ImagePath|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=HXWPVORY|
+RECORD=41|LINENO=  27|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=25|IsHidden=T|Name=ProjectName|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=UVQAJJYA|
+RECORD=41|LINENO=  28|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=26|IsHidden=T|Name=Application_BuildNumber|OwnerPartId=-1|ReadOnlyState=1|Text=*|UniqueID=IEYMEOFL|
+RECORD=14|LINENO=  29|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=11599871|Corner.X=590|Corner.Y=700|IndexInSheet=27|LineWidth=3|Location.X=360|Location.Y=630|OwnerPartId=-1|
+RECORD= 4|LINENO=  30|OWNERPARTID= -42|OWNERINDEX= -42|FontID=2|IndexInSheet=28|Justification=1|Location.X=475|Location.Y=630|OwnerPartId=-1|Text=POWER|
+RECORD=41|LINENO=  31|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=29|IsHidden=T|Name=ConfigurationParameters|OwnerPartId=-1|ReadOnlyState=1|UniqueID=YTYRBQAJ|
+RECORD=41|LINENO=  32|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=30|IsHidden=T|Name=ConfiguratorName|OwnerPartId=-1|ReadOnlyState=1|UniqueID=DXNUYKQL|
+RECORD=41|LINENO=  33|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=31|IsHidden=T|Name=VersionControl_RevNumber|OwnerPartId=-1|ReadOnlyState=1|UniqueID=VMXOOHXA|
+RECORD=41|LINENO=  34|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=32|IsHidden=T|Name=IsUserConfigurable|OwnerPartId=-1|ReadOnlyState=1|UniqueID=MGNMJOVX|
+RECORD=41|LINENO=  35|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=33|IsHidden=T|Name=VersionControl_ProjFolderRevNumber|OwnerPartId=-1|ReadOnlyState=1|UniqueID=HIMBHWXY|
+RECORD=14|LINENO=  36|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=11599871|Corner.X=620|Corner.Y=545|IndexInSheet=34|LineWidth=3|Location.X=520|Location.Y=445|OwnerPartId=-1|
+RECORD=14|LINENO=  37|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=11599871|Corner.X=620|Corner.Y=580|IndexInSheet=35|LineWidth=3|Location.X=520|Location.Y=545|OwnerPartId=-1|
+RECORD= 4|LINENO=  38|OWNERPARTID= -42|OWNERINDEX= -42|FontID=3|IndexInSheet=36|Justification=1|Location.X=570|Location.Y=550|OwnerPartId=-1|Text=BATTERY|
+RECORD=17|LINENO=  39|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=37|Location.X=345|Location.Y=365|Orientation=1|OwnerPartId=-1|ShowNetName=T|Style=2|Text=VBAT|UniqueID=REEFNGKN|
+RECORD=18|LINENO=  40|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=8454143|Color=128|FontID=1|Height=10|IndexInSheet=38|Location.X=335|Location.Y=285|Name=SOCP|OwnerPartId=-1|TextColor=128|UniqueID=SAULDMWK|Width=25|
+RECORD= 1|LINENO=  41|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=6|AreaColor=11599871|Color=128|ComponentDescription=Battery Battery Protection IC Lithium-Ion/Polymer 6-WSON (1.5x1.5)|CurrentPartId=1|DesignItemId=BQ29700DSER|DisplayModeCount=1|IndexInSheet=39|LibReference=BQ29700DSER|LibraryPath=*|Location.X=525|Location.Y=335|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=MZDXEILH|
+RECORD= 2|LINENO=  42|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=1|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=555|Location.Y=345|Name=NC|Name_CustomPosition_Margin=2|OwnerIndex=40|OwnerPartId=1|PinConglomerate=56|PinDesignator_PositionConglomerate=1|PinLength=10|PinName_PositionConglomerate=1|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  43|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=555|Location.Y=345|Name=PinUniqueId|OwnerIndex=41|OwnerPartId=-1|Text=VXMMUNXI|UniqueID=NESPXPBT|
+RECORD= 2|LINENO=  44|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=2|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=495|Location.Y=335|Name=COUT|Name_CustomPosition_Margin=2|OwnerIndex=40|OwnerPartId=1|PinConglomerate=58|PinDesignator_PositionConglomerate=1|PinLength=10|PinName_PositionConglomerate=1|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  45|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=495|Location.Y=335|Name=PinUniqueId|OwnerIndex=43|OwnerPartId=-1|Text=OJVWSYWL|UniqueID=HBSIURHW|
+RECORD= 2|LINENO=  46|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=3|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=495|Location.Y=325|Name=DOUT|Name_CustomPosition_Margin=2|OwnerIndex=40|OwnerPartId=1|PinConglomerate=58|PinDesignator_PositionConglomerate=1|PinLength=10|PinName_PositionConglomerate=1|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  47|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=495|Location.Y=325|Name=PinUniqueId|OwnerIndex=45|OwnerPartId=-1|Text=QMQHCLNS|UniqueID=CEYKMBYO|
+RECORD= 2|LINENO=  48|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=4|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=555|Location.Y=325|Name=VSS|Name_CustomPosition_Margin=2|OwnerIndex=40|OwnerPartId=1|PinConglomerate=56|PinDesignator_PositionConglomerate=1|PinLength=10|PinName_PositionConglomerate=1|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  49|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=555|Location.Y=325|Name=PinUniqueId|OwnerIndex=47|OwnerPartId=-1|Text=CIIKCJDP|UniqueID=BLYXSEIT|
+RECORD= 2|LINENO=  50|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=5|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=555|Location.Y=335|Name=BAT|Name_CustomPosition_Margin=2|OwnerIndex=40|OwnerPartId=1|PinConglomerate=56|PinDesignator_PositionConglomerate=1|PinLength=10|PinName_PositionConglomerate=1|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  51|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=555|Location.Y=335|Name=PinUniqueId|OwnerIndex=49|OwnerPartId=-1|Text=QZCGFUJS|UniqueID=VSXFRFCF|
+RECORD= 2|LINENO=  52|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=6|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=495|Location.Y=345|Name=V-|Name_CustomPosition_Margin=2|OwnerIndex=40|OwnerPartId=1|PinConglomerate=58|PinDesignator_PositionConglomerate=1|PinLength=10|PinName_PositionConglomerate=1|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  53|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=495|Location.Y=345|Name=PinUniqueId|OwnerIndex=51|OwnerPartId=-1|Text=NYAGILWO|UniqueID=QBQQAVTB|
+RECORD=14|LINENO=  54|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=11599871|Color=128|Corner.X=555|Corner.Y=355|IndexInSheet=6|IsNotAccesible=T|IsSolid=T|Location.X=495|Location.Y=315|OwnerIndex=40|OwnerPartId=1|Transparent=T|
+RECORD=34|LINENO=  55|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=495|Location.Y=305|Name=Designator|OwnerIndex=40|OwnerPartId=-1|ReadOnlyState=1|Text=U5|UniqueID=JUKMFNGE|
+RECORD=41|LINENO=  56|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=495|Location.Y=295|Name=Comment|OwnerIndex=40|OwnerPartId=-1|Text=BQ29700DSER|UniqueID=FFFSVQFW|
+RECORD=44|LINENO=  57|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=40|
+RECORD=45|LINENO=  58|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Battery Battery Protection IC Lithium-Ion/Polymer 6-WSON (1.5x1.5)|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=BQ29700DSER|ModelDatafileKind0=PCBLib|ModelName=BQ29700DSER|ModelType=PCBLIB|OwnerIndex=56|UniqueID=DSGSSDFK|UseComponentLibrary=T|
+RECORD=46|LINENO=  59|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=57|
+RECORD=48|LINENO=  60|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=57|
+RECORD= 1|LINENO=  61|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=8|AreaColor=11599871|Color=128|ComponentDescription=Mosfet Array 2 N-Channel (Dual) Common Drain 24V 14A 1.4W Surface Mount SOT-28FL/ECH8|CurrentPartId=1|DesignItemId=ECH8693R-TL-W|DisplayModeCount=1|IndexInSheet=40|LibReference=ECH8693R-TL-W|LibraryPath=*|Location.X=440|Location.Y=285|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=CYUDLHJR|
+RECORD= 2|LINENO=  62|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=1|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=415|Location.Y=285|Name=S1|Name_CustomPosition_Margin=2|OwnerIndex=60|OwnerPartId=1|PinConglomerate=34|PinDesignator_PositionConglomerate=1|PinLength=10|PinName_PositionConglomerate=1|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  63|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=415|Location.Y=285|Name=PinUniqueId|OwnerIndex=61|OwnerPartId=-1|Text=LTHKCKXN|UniqueID=CAKZSUKL|
+RECORD= 2|LINENO=  64|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=2|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=420|Location.Y=295|Name=G1|Name_CustomFontID=1|OwnerIndex=60|OwnerPartId=1|PinConglomerate=33|PinDesignator_PositionConglomerate=5|PinLength=10|PinName_PositionConglomerate=21|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  65|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=420|Location.Y=295|Name=PinUniqueId|OwnerIndex=63|OwnerPartId=-1|Text=USWLKXMZ|UniqueID=FENLQEBC|
+RECORD= 2|LINENO=  66|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=3|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=465|Location.Y=285|Name=S2|Name_CustomPosition_Margin=2|OwnerIndex=60|OwnerPartId=1|PinConglomerate=32|PinDesignator_PositionConglomerate=1|PinLength=10|PinName_PositionConglomerate=1|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  67|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=465|Location.Y=285|Name=PinUniqueId|OwnerIndex=65|OwnerPartId=-1|Text=SVADFDSN|UniqueID=SZNCTBEX|
+RECORD= 2|LINENO=  68|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=4|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=460|Location.Y=295|Name=G2|Name_CustomFontID=1|Name_CustomPosition_Margin=2|OwnerIndex=60|OwnerPartId=1|PinConglomerate=33|PinDesignator_PositionConglomerate=5|PinLength=10|PinName_PositionConglomerate=21|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  69|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=460|Location.Y=295|Name=PinUniqueId|OwnerIndex=67|OwnerPartId=-1|Text=NKPUIBYC|UniqueID=CTUKKING|
+RECORD= 2|LINENO=  70|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=5|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=455|Location.Y=285|Name=D|Name_CustomFontID=1|Name_CustomPosition_Margin=2|OwnerIndex=60|OwnerPartId=1|PinConglomerate=34|PinDesignator_PositionConglomerate=5|PinLength=10|PinName_PositionConglomerate=21|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  71|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=455|Location.Y=285|Name=PinUniqueId|OwnerIndex=69|OwnerPartId=-1|Text=KSALFVCV|UniqueID=SWUSUJBA|
+RECORD= 2|LINENO=  72|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=6|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=455|Location.Y=285|Name=D|Name_CustomFontID=1|Name_CustomPosition_Margin=2|OwnerIndex=60|OwnerPartId=1|PinConglomerate=34|PinDesignator_PositionConglomerate=5|PinLength=10|PinName_PositionConglomerate=21|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  73|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=455|Location.Y=285|Name=PinUniqueId|OwnerIndex=71|OwnerPartId=-1|Text=HRYDTTLF|UniqueID=HMANRQOL|
+RECORD= 2|LINENO=  74|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=7|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=425|Location.Y=285|Name=D|Name_CustomFontID=1|Name_CustomPosition_Margin=2|OwnerIndex=60|OwnerPartId=1|PinConglomerate=32|PinDesignator_PositionConglomerate=5|PinLength=10|PinName_PositionConglomerate=21|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  75|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=425|Location.Y=285|Name=PinUniqueId|OwnerIndex=73|OwnerPartId=-1|Text=LUKPHGLI|UniqueID=AOXAHQIA|
+RECORD= 2|LINENO=  76|OWNERPARTID= -42|OWNERINDEX= -42|%UTF8%SwapIDPart=Â¦&Â¦VDD|Designator=8|Designator_CustomPosition_Margin=2|Designator_CustomPosition_Margin_Frac=50000|Electrical=4|FormalType=1|Location.X=425|Location.Y=285|Name=D|Name_CustomFontID=1|Name_CustomPosition_Margin=2|OwnerIndex=60|OwnerPartId=1|PinConglomerate=32|PinDesignator_PositionConglomerate=5|PinLength=10|PinName_PositionConglomerate=21|SwapIDPart=Ž&ŽVDD|
+RECORD=41|LINENO=  77|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=425|Location.Y=285|Name=PinUniqueId|OwnerIndex=75|OwnerPartId=-1|Text=BUWRVDFS|UniqueID=VMXZAZAW|
+RECORD= 6|LINENO=  78|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=8|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=415|X2=425|Y1=295|Y2=295|
+RECORD= 6|LINENO=  79|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=9|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=455|X2=465|Y1=295|Y2=295|
+RECORD= 6|LINENO=  80|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=10|IsNotAccesible=T|LineWidth=1|LocationCount=3|OwnerIndex=60|OwnerPartId=1|X1=415|X2=415|X3=425|Y1=285|Y2=290|Y3=290|
+RECORD= 6|LINENO=  81|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=11|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=425|X2=425|Y1=290|Y2=285|
+RECORD= 6|LINENO=  82|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=12|IsNotAccesible=T|LineWidth=1|LocationCount=4|OwnerIndex=60|OwnerPartId=1|X1=455|X2=455|X3=465|X4=465|Y1=285|Y2=290|Y3=290|Y4=285|
+RECORD= 4|LINENO=  83|OWNERPARTID= -42|OWNERINDEX= -42|FontID=1|IndexInSheet=13|IsNotAccesible=T|Location.X=425|Location.Y=295|OwnerIndex=60|OwnerPartId=1|Text=G|
+RECORD= 4|LINENO=  84|OWNERPARTID= -42|OWNERINDEX= -42|FontID=1|IndexInSheet=14|IsNotAccesible=T|Justification=1|Location.X=410|Location.Y=285|OwnerIndex=60|OwnerPartId=1|Text=S|
+RECORD= 4|LINENO=  85|OWNERPARTID= -42|OWNERINDEX= -42|FontID=1|IndexInSheet=15|IsNotAccesible=T|Justification=1|Location.X=440|Location.Y=285|OwnerIndex=60|OwnerPartId=1|Text=D|
+RECORD= 4|LINENO=  86|OWNERPARTID= -42|OWNERINDEX= -42|FontID=1|IndexInSheet=16|IsNotAccesible=T|Location.X=467|Location.Y=285|OwnerIndex=60|OwnerPartId=1|Text=S|
+RECORD= 4|LINENO=  87|OWNERPARTID= -42|OWNERINDEX= -42|FontID=1|IndexInSheet=17|IsNotAccesible=T|Location.X=450|Location.Y=295|OwnerIndex=60|OwnerPartId=1|Text=G|
+RECORD= 6|LINENO=  88|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=18|IsNotAccesible=T|LineWidth=1|LocationCount=3|OwnerIndex=60|OwnerPartId=1|X1=415|X2=420|X3=420|Y1=285|Y2=285|Y3=290|
+RECORD= 6|LINENO=  89|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=19|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=420|X2=419|Y1=290|Y2=288|
+RECORD= 6|LINENO=  90|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=20|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=420|X2=421|Y1=290|Y2=288|
+RECORD= 6|LINENO=  91|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=21|IsNotAccesible=T|LineWidth=1|LocationCount=3|OwnerIndex=60|OwnerPartId=1|X1=465|X2=460|X3=460|Y1=285|Y2=285|Y3=290|
+RECORD= 6|LINENO=  92|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=22|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=460|X2=461|Y1=290|Y2=288|
+RECORD= 6|LINENO=  93|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=23|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=460|X2=459|Y1=290|Y2=288|
+RECORD= 6|LINENO=  94|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=24|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=422|X2=418|Y1=280|Y2=278|
+RECORD= 6|LINENO=  95|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=25|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=422|X2=418|Y1=280|Y2=282|
+RECORD= 6|LINENO=  96|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=26|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=418|X2=418|Y1=282|Y2=278|
+RECORD= 6|LINENO=  97|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=27|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=422|X2=422|Y1=282|Y2=278|
+RECORD= 6|LINENO=  98|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=28|IsNotAccesible=T|LineWidth=1|LocationCount=3|OwnerIndex=60|OwnerPartId=1|X1=418|X2=415|X3=415|Y1=280|Y2=280|Y3=285|
+RECORD= 6|LINENO=  99|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=29|IsNotAccesible=T|LineWidth=1|LocationCount=3|OwnerIndex=60|OwnerPartId=1|X1=422|X2=425|X3=425|Y1=280|Y2=280|Y3=285|
+RECORD= 6|LINENO= 100|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=30|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=458|X2=462|Y1=280|Y2=278|
+RECORD= 6|LINENO= 101|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=31|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=458|X2=462|Y1=280|Y2=282|
+RECORD= 6|LINENO= 102|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=32|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=462|X2=462|Y1=282|Y2=278|
+RECORD= 6|LINENO= 103|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=33|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=60|OwnerPartId=1|X1=458|X2=458|Y1=282|Y2=278|
+RECORD= 6|LINENO= 104|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=34|IsNotAccesible=T|LineWidth=1|LocationCount=3|OwnerIndex=60|OwnerPartId=1|X1=462|X2=465|X3=465|Y1=280|Y2=280|Y3=285|
+RECORD= 6|LINENO= 105|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=35|IsNotAccesible=T|LineWidth=1|LocationCount=3|OwnerIndex=60|OwnerPartId=1|X1=458|X2=455|X3=455|Y1=280|Y2=280|Y3=285|
+RECORD=34|LINENO= 106|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=407|Location.X_Frac=72335|Location.Y=267|Name=Designator|OwnerIndex=60|OwnerPartId=-1|ReadOnlyState=1|Text=Q1|UniqueID=SFVNEPTT|
+RECORD=41|LINENO= 107|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=407|Location.X_Frac=72335|Location.Y=257|Name=Comment|OwnerIndex=60|OwnerPartId=-1|Text=ECH8693R-TL-W|UniqueID=YKJNQIVE|
+RECORD=44|LINENO= 108|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=60|
+RECORD=45|LINENO= 109|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Mosfet Array 2 N-Channel (Dual) Common Drain 24V 14A 1.4W Surface Mount SOT-28FL/ECH8|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=ECH8693R-TL-W|ModelDatafileKind0=PCBLib|ModelName=ECH8693R-TL-W|ModelType=PCBLIB|OwnerIndex=107|UniqueID=TUARWBTW|UseComponentLibrary=T|
+RECORD=46|LINENO= 110|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=108|
+RECORD=48|LINENO= 111|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=108|
+RECORD=27|LINENO= 112|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=41|LineWidth=1|LocationCount=2|OwnerPartId=-1|UniqueID=GSKLYLZE|X1=445|X2=435|Y1=285|Y2=285|
+RECORD= 1|LINENO= 113|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=0603 Resistor|CurrentPartId=1|DesignItemId=Resistor_0603|DisplayModeCount=1|IndexInSheet=42|LibReference=Resistor_0603|LibraryPath=*|Location.X=410|Location.Y=305|Orientation=2|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=YACDFBJK|
+RECORD= 2|LINENO= 114|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=416|Location.Y=305|Name=1|OwnerIndex=112|OwnerPartId=1|PinConglomerate=32|PinLength=4|
+RECORD=41|LINENO= 115|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=416|Location.Y=305|Name=PinUniqueId|OwnerIndex=113|OwnerPartId=-1|Text=QMICPXIR|UniqueID=QHTUJIHI|
+RECORD= 2|LINENO= 116|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=404|Location.Y=305|Name=2|OwnerIndex=112|OwnerPartId=1|PinConglomerate=34|PinLength=4|
+RECORD=41|LINENO= 117|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=404|Location.Y=305|Name=PinUniqueId|OwnerIndex=115|OwnerPartId=-1|Text=MFZGVJVY|UniqueID=YMUGBRGL|
+RECORD= 6|LINENO= 118|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=2|IsNotAccesible=T|LineWidth=1|LocationCount=8|OwnerIndex=112|OwnerPartId=1|X1=404|X2=405|X3=407|X4=409|X5=411|X6=413|X7=415|X8=416|Y1=305|Y2=307|Y3=303|Y4=307|Y5=303|Y6=307|Y7=303|Y8=305|
+RECORD=34|LINENO= 119|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=400|Location.Y=320|Name=Designator|OwnerIndex=112|OwnerPartId=-1|ReadOnlyState=1|Text=R8|UniqueID=BGRPOYQP|
+RECORD=41|LINENO= 120|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=400|Location.Y=310|Name=Comment|OwnerIndex=112|OwnerPartId=-1|Text=5.1M|UniqueID=FDJVOIPK|
+RECORD=44|LINENO= 121|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=112|
+RECORD=45|LINENO= 122|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=High density 0603 passive|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=RES_0603_HIGH|ModelDatafileKind0=PCBLib|ModelName=RES_0603_HIGH|ModelType=PCBLIB|OwnerIndex=120|UniqueID=UJNAUGHD|UseComponentLibrary=T|
+RECORD=46|LINENO= 123|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=121|
+RECORD=48|LINENO= 124|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=121|
+RECORD=45|LINENO= 125|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Low density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0603_LOW|ModelDatafileKind0=PCBLib|ModelName=RES_0603_LOW|ModelType=PCBLIB|OwnerIndex=120|UniqueID=JDWPCCTU|UseComponentLibrary=T|
+RECORD=46|LINENO= 126|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=124|
+RECORD=48|LINENO= 127|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=124|
+RECORD=45|LINENO= 128|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Medium density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0603_MEDIUM|ModelDatafileKind0=PCBLib|ModelName=RES_0603_MEDIUM|ModelType=PCBLIB|OwnerIndex=120|UniqueID=DDKQDSAU|UseComponentLibrary=T|
+RECORD=46|LINENO= 129|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=127|
+RECORD=48|LINENO= 130|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=127|
+RECORD=27|LINENO= 131|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=43|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=EESLASPK|X1=400|X2=400|X3=405|Y1=305|Y2=285|Y3=285|
+RECORD= 1|LINENO= 132|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=0603 Resistor|CurrentPartId=1|DesignItemId=Resistor_0603|DisplayModeCount=1|IndexInSheet=44|LibReference=Resistor_0603|LibraryPath=*|Location.X=470|Location.Y=305|Orientation=2|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=JTZOPSPL|
+RECORD= 2|LINENO= 133|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=476|Location.Y=305|Name=1|OwnerIndex=131|OwnerPartId=1|PinConglomerate=32|PinLength=4|
+RECORD=41|LINENO= 134|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=476|Location.Y=305|Name=PinUniqueId|OwnerIndex=132|OwnerPartId=-1|Text=MHKYTXFU|UniqueID=EIJWLNYB|
+RECORD= 2|LINENO= 135|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=464|Location.Y=305|Name=2|OwnerIndex=131|OwnerPartId=1|PinConglomerate=34|PinLength=4|
+RECORD=41|LINENO= 136|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=464|Location.Y=305|Name=PinUniqueId|OwnerIndex=134|OwnerPartId=-1|Text=OAMZZOUI|UniqueID=OUXHMBAI|
+RECORD= 6|LINENO= 137|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=2|IsNotAccesible=T|LineWidth=1|LocationCount=8|OwnerIndex=131|OwnerPartId=1|X1=464|X2=465|X3=467|X4=469|X5=471|X6=473|X7=475|X8=476|Y1=305|Y2=307|Y3=303|Y4=307|Y5=303|Y6=307|Y7=303|Y8=305|
+RECORD=34|LINENO= 138|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=440|Location.Y=320|Name=Designator|OwnerIndex=131|OwnerPartId=-1|ReadOnlyState=1|Text=R9|UniqueID=AIDZSVBV|
+RECORD=41|LINENO= 139|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=440|Location.Y=310|Name=Comment|OwnerIndex=131|OwnerPartId=-1|Text=5.1M|UniqueID=YRXJOGPO|
+RECORD=44|LINENO= 140|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=131|
+RECORD=45|LINENO= 141|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=High density 0603 passive|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=RES_0603_HIGH|ModelDatafileKind0=PCBLib|ModelName=RES_0603_HIGH|ModelType=PCBLIB|OwnerIndex=139|UniqueID=QGDIVYQA|UseComponentLibrary=T|
+RECORD=46|LINENO= 142|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=140|
+RECORD=48|LINENO= 143|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=140|
+RECORD=45|LINENO= 144|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Low density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0603_LOW|ModelDatafileKind0=PCBLib|ModelName=RES_0603_LOW|ModelType=PCBLIB|OwnerIndex=139|UniqueID=IHMVJBUM|UseComponentLibrary=T|
+RECORD=46|LINENO= 145|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=143|
+RECORD=48|LINENO= 146|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=143|
+RECORD=45|LINENO= 147|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Medium density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0603_MEDIUM|ModelDatafileKind0=PCBLib|ModelName=RES_0603_MEDIUM|ModelType=PCBLIB|OwnerIndex=139|UniqueID=PHYSIQQO|UseComponentLibrary=T|
+RECORD=46|LINENO= 148|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=146|
+RECORD=48|LINENO= 149|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=146|
+RECORD=27|LINENO= 150|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=45|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=RJQMLKLM|X1=480|X2=480|X3=475|Y1=305|Y2=285|Y3=285|
+RECORD=27|LINENO= 151|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=46|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=ILAULYHD|X1=460|X2=460|X3=485|Y1=305|Y2=325|Y3=325|
+RECORD=27|LINENO= 152|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=47|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=BPRGREJV|X1=485|X2=420|X3=420|Y1=335|Y2=335|Y3=305|
+RECORD= 1|LINENO= 153|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=0603 Resistor|CurrentPartId=1|DesignItemId=Resistor_0603|DisplayModeCount=1|IndexInSheet=48|LibReference=Resistor_0603|LibraryPath=*|Location.X=390|Location.Y=315|Orientation=3|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=UZESBWTE|
+RECORD= 2|LINENO= 154|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=390|Location.Y=321|Name=1|OwnerIndex=152|OwnerPartId=1|PinConglomerate=33|PinLength=4|
+RECORD=41|LINENO= 155|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=390|Location.Y=321|Name=PinUniqueId|OwnerIndex=153|OwnerPartId=-1|Text=HRHEPXTO|UniqueID=LDWKXUBS|
+RECORD= 2|LINENO= 156|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=390|Location.Y=309|Name=2|OwnerIndex=152|OwnerPartId=1|PinConglomerate=35|PinLength=4|
+RECORD=41|LINENO= 157|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=390|Location.Y=309|Name=PinUniqueId|OwnerIndex=155|OwnerPartId=-1|Text=JCAAGXGI|UniqueID=GOCUVBZD|
+RECORD= 6|LINENO= 158|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=2|IsNotAccesible=T|LineWidth=1|LocationCount=8|OwnerIndex=152|OwnerPartId=1|X1=390|X2=388|X3=392|X4=388|X5=392|X6=388|X7=392|X8=390|Y1=309|Y2=310|Y3=312|Y4=314|Y5=316|Y6=318|Y7=320|Y8=321|
+RECORD=34|LINENO= 159|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=370|Location.Y=320|Name=Designator|OwnerIndex=152|OwnerPartId=-1|ReadOnlyState=1|Text=R7|UniqueID=UEPCZNJW|
+RECORD=41|LINENO= 160|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=370|Location.Y=310|Name=Comment|OwnerIndex=152|OwnerPartId=-1|Text=2.2K|UniqueID=SWKRFZJW|
+RECORD=44|LINENO= 161|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=152|
+RECORD=45|LINENO= 162|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=High density 0603 passive|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=RES_0603_HIGH|ModelDatafileKind0=PCBLib|ModelName=RES_0603_HIGH|ModelType=PCBLIB|OwnerIndex=160|UniqueID=IKRTULFB|UseComponentLibrary=T|
+RECORD=46|LINENO= 163|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=161|
+RECORD=48|LINENO= 164|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=161|
+RECORD=45|LINENO= 165|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Low density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0603_LOW|ModelDatafileKind0=PCBLib|ModelName=RES_0603_LOW|ModelType=PCBLIB|OwnerIndex=160|UniqueID=FBMDSLPX|UseComponentLibrary=T|
+RECORD=46|LINENO= 166|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=164|
+RECORD=48|LINENO= 167|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=164|
+RECORD=45|LINENO= 168|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Medium density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0603_MEDIUM|ModelDatafileKind0=PCBLib|ModelName=RES_0603_MEDIUM|ModelType=PCBLIB|OwnerIndex=160|UniqueID=EQCUFKCU|UseComponentLibrary=T|
+RECORD=46|LINENO= 169|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=167|
+RECORD=48|LINENO= 170|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=167|
+RECORD=27|LINENO= 171|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=49|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=IWZQVDCS|X1=400|X2=390|X3=360|Y1=285|Y2=285|Y3=285|
+RECORD=27|LINENO= 172|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=50|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=HFIZKOJE|X1=390|X2=390|X3=485|Y1=325|Y2=345|Y3=345|
+RECORD=27|LINENO= 173|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=51|LineWidth=1|LocationCount=2|OwnerPartId=-1|UniqueID=WXHRPRZI|X1=390|X2=390|Y1=305|Y2=285|
+RECORD=22|LINENO= 174|OWNERPARTID= -42|OWNERINDEX= -42|Color=255|IndexInSheet=52|IsActive=T|Location.X=565|Location.Y=345|Orientation=1|OwnerPartId=-1|SuppressAll=T|Symbol=Thin Cross|UniqueID=ELZIAFNV|
+RECORD= 1|LINENO= 175|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=0603 Capacitor|CurrentPartId=1|DesignItemId=Capacitor_0603|DisplayModeCount=1|IndexInSheet=53|LibReference=Capacitor_0603|LibraryPath=*|Location.X=585|Location.Y=310|Orientation=3|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=VKSKJSSU|
+RECORD= 2|LINENO= 176|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=585|Location.Y=315|Name=1|OwnerIndex=174|OwnerPartId=1|PinConglomerate=33|PinLength=5|
+RECORD=41|LINENO= 177|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=585|Location.Y=315|Name=PinUniqueId|OwnerIndex=175|OwnerPartId=-1|Text=PZIBQOFO|UniqueID=GLURPELD|
+RECORD= 2|LINENO= 178|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=585|Location.Y=305|Name=2|OwnerIndex=174|OwnerPartId=1|PinConglomerate=35|PinLength=5|
+RECORD=41|LINENO= 179|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=585|Location.Y=305|Name=PinUniqueId|OwnerIndex=177|OwnerPartId=-1|Text=QEKLOXIC|UniqueID=IRFPKZWW|
+RECORD=13|LINENO= 180|OWNERPARTID= -42|OWNERINDEX= -42|Corner.X=580|Corner.Y=308|IndexInSheet=2|IsNotAccesible=T|LineWidth=1|Location.X=590|Location.Y=308|OwnerIndex=174|OwnerPartId=1|
+RECORD=13|LINENO= 181|OWNERPARTID= -42|OWNERINDEX= -42|Corner.X=590|Corner.Y=312|IndexInSheet=3|IsNotAccesible=T|LineWidth=1|Location.X=580|Location.Y=312|OwnerIndex=174|OwnerPartId=1|
+RECORD= 6|LINENO= 182|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=4|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=174|OwnerPartId=1|X1=585|X2=585|Y1=315|Y2=312|
+RECORD= 6|LINENO= 183|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=5|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=174|OwnerPartId=1|X1=585|X2=585|Y1=305|Y2=308|
+RECORD=34|LINENO= 184|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=590|Location.Y=310|Name=Designator|OwnerIndex=174|OwnerPartId=-1|ReadOnlyState=1|Text=C14|UniqueID=USHQASFX|
+RECORD=41|LINENO= 185|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=590|Location.Y=300|Name=Comment|OwnerIndex=174|OwnerPartId=-1|Text=100nF|UniqueID=CQAKBQAC|
+RECORD=44|LINENO= 186|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=174|
+RECORD=45|LINENO= 187|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=High density 0603 passive|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=CAP_0603_HIGH|ModelDatafileKind0=PCBLib|ModelName=CAP_0603_HIGH|ModelType=PCBLIB|OwnerIndex=185|UniqueID=KYQCUMRU|UseComponentLibrary=T|
+RECORD=46|LINENO= 188|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=186|
+RECORD=48|LINENO= 189|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=186|
+RECORD=45|LINENO= 190|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Low density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=CAP_0603_LOW|ModelDatafileKind0=PCBLib|ModelName=CAP_0603_LOW|ModelType=PCBLIB|OwnerIndex=185|UniqueID=CVQCYTLG|UseComponentLibrary=T|
+RECORD=46|LINENO= 191|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=189|
+RECORD=48|LINENO= 192|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=189|
+RECORD=45|LINENO= 193|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Medium density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=CAP_0603_MEDIUM|ModelDatafileKind0=PCBLib|ModelName=CAP_0603_MEDIUM|ModelType=PCBLIB|OwnerIndex=185|UniqueID=JYCLGOXE|UseComponentLibrary=T|
+RECORD=46|LINENO= 194|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=192|
+RECORD=48|LINENO= 195|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=192|
+RECORD= 1|LINENO= 196|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=0603 Resistor|CurrentPartId=1|DesignItemId=Resistor_0603|DisplayModeCount=1|IndexInSheet=54|LibReference=Resistor_0603|LibraryPath=*|Location.X=585|Location.Y=355|Orientation=3|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=INYVYCQW|
+RECORD= 2|LINENO= 197|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=585|Location.Y=361|Name=1|OwnerIndex=195|OwnerPartId=1|PinConglomerate=33|PinLength=4|
+RECORD=41|LINENO= 198|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=585|Location.Y=361|Name=PinUniqueId|OwnerIndex=196|OwnerPartId=-1|Text=SEBQVXVV|UniqueID=MMVXVWOJ|
+RECORD= 2|LINENO= 199|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=585|Location.Y=349|Name=2|OwnerIndex=195|OwnerPartId=1|PinConglomerate=35|PinLength=4|
+RECORD=41|LINENO= 200|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=585|Location.Y=349|Name=PinUniqueId|OwnerIndex=198|OwnerPartId=-1|Text=BMHCFAUK|UniqueID=HRPWKEGN|
+RECORD= 6|LINENO= 201|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=2|IsNotAccesible=T|LineWidth=1|LocationCount=8|OwnerIndex=195|OwnerPartId=1|X1=585|X2=583|X3=587|X4=583|X5=587|X6=583|X7=587|X8=585|Y1=349|Y2=350|Y3=352|Y4=354|Y5=356|Y6=358|Y7=360|Y8=361|
+RECORD=34|LINENO= 202|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=590|Location.Y=355|Name=Designator|OwnerIndex=195|OwnerPartId=-1|ReadOnlyState=1|Text=R6|UniqueID=UFJPIXXH|
+RECORD=41|LINENO= 203|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=590|Location.Y=345|Name=Comment|OwnerIndex=195|OwnerPartId=-1|Text=330|UniqueID=TOEFCHDR|
+RECORD=44|LINENO= 204|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=195|
+RECORD=45|LINENO= 205|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=High density 0603 passive|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=RES_0603_HIGH|ModelDatafileKind0=PCBLib|ModelName=RES_0603_HIGH|ModelType=PCBLIB|OwnerIndex=203|UniqueID=QSAITBES|UseComponentLibrary=T|
+RECORD=46|LINENO= 206|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=204|
+RECORD=48|LINENO= 207|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=204|
+RECORD=45|LINENO= 208|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Low density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0603_LOW|ModelDatafileKind0=PCBLib|ModelName=RES_0603_LOW|ModelType=PCBLIB|OwnerIndex=203|UniqueID=YZDSQCGR|UseComponentLibrary=T|
+RECORD=46|LINENO= 209|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=207|
+RECORD=48|LINENO= 210|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=207|
+RECORD=45|LINENO= 211|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Medium density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0603_MEDIUM|ModelDatafileKind0=PCBLib|ModelName=RES_0603_MEDIUM|ModelType=PCBLIB|OwnerIndex=203|UniqueID=CKYWRPCE|UseComponentLibrary=T|
+RECORD=46|LINENO= 212|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=210|
+RECORD=48|LINENO= 213|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=210|
+RECORD=25|LINENO= 214|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=55|Location.X=565|Location.Y=335|OwnerPartId=-1|Text=BAT|UniqueID=OHRWXMFM|
+RECORD=27|LINENO= 215|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=56|LineWidth=1|LocationCount=4|OwnerPartId=-1|UniqueID=JQMFNRRI|X1=480|X2=575|X3=585|X4=585|Y1=285|Y2=285|Y3=285|Y4=300|
+RECORD=27|LINENO= 216|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=57|LineWidth=1|LocationCount=2|OwnerPartId=-1|UniqueID=NDPWWGDT|X1=585|X2=345|Y1=365|Y2=365|
+RECORD=27|LINENO= 217|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=58|LineWidth=1|LocationCount=2|OwnerPartId=-1|UniqueID=HYVTBYIK|X1=585|X2=585|Y1=335|Y2=345|
+RECORD=17|LINENO= 218|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=59|Location.X=545|Location.Y=520|Orientation=1|OwnerPartId=-1|ShowNetName=T|Style=2|Text=VBAT|UniqueID=UETSBDPJ|
+RECORD=17|LINENO= 219|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=60|Location.X=545|Location.Y=480|Orientation=3|OwnerPartId=-1|ShowNetName=T|Style=5|Text=B_GND|UniqueID=ODYMEGXY|
+RECORD=17|LINENO= 220|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=61|Location.X=585|Location.Y=285|Orientation=3|OwnerPartId=-1|ShowNetName=T|Style=5|Text=B_GND|UniqueID=TTVBKLRI|
+RECORD=25|LINENO= 221|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=62|Location.X=365|Location.Y=285|OwnerPartId=-1|Text=SOCP|UniqueID=QGRVKUPT|
+RECORD=14|LINENO= 222|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=11599871|Corner.X=620|Corner.Y=390|IndexInSheet=63|LineWidth=3|Location.X=330|Location.Y=245|OwnerPartId=-1|
+RECORD=14|LINENO= 223|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=11599871|Corner.X=620|Corner.Y=425|IndexInSheet=64|LineWidth=3|Location.X=330|Location.Y=390|OwnerPartId=-1|
+RECORD= 4|LINENO= 224|OWNERPARTID= -42|OWNERINDEX= -42|FontID=3|IndexInSheet=65|Justification=1|Location.X=475|Location.Y=395|OwnerPartId=-1|Text=BATTERY PROTECTION|
+RECORD=25|LINENO= 225|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=66|Location.X=460|Location.Y=335|OwnerPartId=-1|Text=COUT|UniqueID=DRYKZGFB|
+RECORD=25|LINENO= 226|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=67|Location.X=460|Location.Y=325|OwnerPartId=-1|Text=DOUT|UniqueID=NVNEWZTD|
+RECORD=25|LINENO= 227|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=68|Location.X=445|Location.Y=345|OwnerPartId=-1|Text=PROT_V-|UniqueID=PBHZXRIE|
+RECORD= 1|LINENO= 228|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=0805 Resistor|CurrentPartId=1|DesignItemId=Resistor_0805|DisplayModeCount=1|IndexInSheet=69|LibReference=Resistor_0805|LibraryPath=*|Location.X=425|Location.Y=520|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=TRJFQQGP|
+RECORD= 2|LINENO= 229|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=419|Location.Y=520|Name=1|OwnerIndex=227|OwnerPartId=1|PinConglomerate=34|PinLength=4|
+RECORD=41|LINENO= 230|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=419|Location.Y=520|Name=PinUniqueId|OwnerIndex=228|OwnerPartId=-1|Text=QLUODNIY|UniqueID=UTBBHITG|
+RECORD= 2|LINENO= 231|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=431|Location.Y=520|Name=2|OwnerIndex=227|OwnerPartId=1|PinConglomerate=32|PinLength=4|
+RECORD=41|LINENO= 232|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=431|Location.Y=520|Name=PinUniqueId|OwnerIndex=230|OwnerPartId=-1|Text=FFUCMDEE|UniqueID=STBFPMHH|
+RECORD= 6|LINENO= 233|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=2|IsNotAccesible=T|LineWidth=1|LocationCount=8|OwnerIndex=227|OwnerPartId=1|X1=431|X2=430|X3=428|X4=426|X5=424|X6=422|X7=420|X8=419|Y1=520|Y2=518|Y3=522|Y4=518|Y5=522|Y6=518|Y7=522|Y8=520|
+RECORD=34|LINENO= 234|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=405|Location.Y=510|Name=Designator|OwnerIndex=227|OwnerPartId=-1|ReadOnlyState=1|Text=R12|UniqueID=PABAGKEP|
+RECORD=41|LINENO= 235|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=405|Location.Y=500|Name=Comment|OwnerIndex=227|OwnerPartId=-1|Text=0.39 Ohm|UniqueID=NEQEIKQZ|
+RECORD=44|LINENO= 236|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=227|
+RECORD=45|LINENO= 237|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=High density 0805 passive|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=RES_0805_HIGH|ModelDatafileKind0=PCBLib|ModelName=RES_0805_HIGH|ModelType=PCBLIB|OwnerIndex=235|UniqueID=PLHWZRSG|UseComponentLibrary=T|
+RECORD=46|LINENO= 238|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=236|
+RECORD=48|LINENO= 239|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=236|
+RECORD=45|LINENO= 240|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Low density 0805 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0805_LOW|ModelDatafileKind0=PCBLib|ModelName=RES_0805_LOW|ModelType=PCBLIB|OwnerIndex=235|UniqueID=VLFWBHIB|UseComponentLibrary=T|
+RECORD=46|LINENO= 241|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=239|
+RECORD=48|LINENO= 242|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=239|
+RECORD=45|LINENO= 243|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Medium density 0805 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=RES_0805_MEDIUM|ModelDatafileKind0=PCBLib|ModelName=RES_0805_MEDIUM|ModelType=PCBLIB|OwnerIndex=235|UniqueID=CZUGAMXS|UseComponentLibrary=T|
+RECORD=46|LINENO= 244|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=242|
+RECORD=48|LINENO= 245|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=242|
+RECORD= 1|LINENO= 246|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=0603 Capacitor|CurrentPartId=1|DesignItemId=Capacitor_0603|DisplayModeCount=1|IndexInSheet=70|LibReference=Capacitor_0603|LibraryPath=*|Location.X=455|Location.Y=500|Orientation=3|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=JAOYPWSA|
+RECORD= 2|LINENO= 247|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=455|Location.Y=505|Name=1|OwnerIndex=245|OwnerPartId=1|PinConglomerate=33|PinLength=5|
+RECORD=41|LINENO= 248|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=455|Location.Y=505|Name=PinUniqueId|OwnerIndex=246|OwnerPartId=-1|Text=LNSCOXIL|UniqueID=SFHJFBIJ|
+RECORD= 2|LINENO= 249|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=455|Location.Y=495|Name=2|OwnerIndex=245|OwnerPartId=1|PinConglomerate=35|PinLength=5|
+RECORD=41|LINENO= 250|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=455|Location.Y=495|Name=PinUniqueId|OwnerIndex=248|OwnerPartId=-1|Text=NKLZNBWJ|UniqueID=WKKXPPSE|
+RECORD=13|LINENO= 251|OWNERPARTID= -42|OWNERINDEX= -42|Corner.X=450|Corner.Y=498|IndexInSheet=2|IsNotAccesible=T|LineWidth=1|Location.X=460|Location.Y=498|OwnerIndex=245|OwnerPartId=1|
+RECORD=13|LINENO= 252|OWNERPARTID= -42|OWNERINDEX= -42|Corner.X=460|Corner.Y=502|IndexInSheet=3|IsNotAccesible=T|LineWidth=1|Location.X=450|Location.Y=502|OwnerIndex=245|OwnerPartId=1|
+RECORD= 6|LINENO= 253|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=4|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=245|OwnerPartId=1|X1=455|X2=455|Y1=505|Y2=502|
+RECORD= 6|LINENO= 254|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=5|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=245|OwnerPartId=1|X1=455|X2=455|Y1=495|Y2=498|
+RECORD=34|LINENO= 255|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=460|Location.Y=500|Name=Designator|OwnerIndex=245|OwnerPartId=-1|ReadOnlyState=1|Text=C15|UniqueID=ZHSULPEH|
+RECORD=41|LINENO= 256|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=460|Location.Y=490|Name=Comment|OwnerIndex=245|OwnerPartId=-1|Text=10uF|UniqueID=DEXFVQWJ|
+RECORD=44|LINENO= 257|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=245|
+RECORD=45|LINENO= 258|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=High density 0603 passive|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=CAP_0603_HIGH|ModelDatafileKind0=PCBLib|ModelName=CAP_0603_HIGH|ModelType=PCBLIB|OwnerIndex=256|UniqueID=AJBBEBKN|UseComponentLibrary=T|
+RECORD=46|LINENO= 259|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=257|
+RECORD=48|LINENO= 260|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=257|
+RECORD=45|LINENO= 261|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Low density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=CAP_0603_LOW|ModelDatafileKind0=PCBLib|ModelName=CAP_0603_LOW|ModelType=PCBLIB|OwnerIndex=256|UniqueID=ZMBHZDFQ|UseComponentLibrary=T|
+RECORD=46|LINENO= 262|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=260|
+RECORD=48|LINENO= 263|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=260|
+RECORD=45|LINENO= 264|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Medium density 0603 passive|IndexInSheet=-1|IntegratedModel=T|ModelDatafileEntity0=CAP_0603_MEDIUM|ModelDatafileKind0=PCBLib|ModelName=CAP_0603_MEDIUM|ModelType=PCBLIB|OwnerIndex=256|UniqueID=CRAPUHKG|UseComponentLibrary=T|
+RECORD=46|LINENO= 265|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=263|
+RECORD=48|LINENO= 266|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=263|
+RECORD=25|LINENO= 267|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=71|Location.X=375|Location.Y=520|OwnerPartId=-1|Text=VBUS_IN|UniqueID=NEGQSAOC|
+RECORD=17|LINENO= 268|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=72|Location.X=455|Location.Y=520|Orientation=1|OwnerPartId=-1|ShowNetName=T|Style=2|Text=VBUS|UniqueID=AESIYEQA|
+RECORD=27|LINENO= 269|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=73|LineWidth=1|LocationCount=2|OwnerPartId=-1|UniqueID=AQKQIJBD|X1=375|X2=415|Y1=520|Y2=520|
+RECORD=17|LINENO= 270|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|FontID=1|IndexInSheet=74|Location.X=455|Location.Y=480|Orientation=3|OwnerPartId=-1|ShowNetName=T|Style=4|Text=GND|UniqueID=OCEZYSCK|
+RECORD= 1|LINENO= 271|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=Coin, 24.5mm 3.7V Lithium-Ion Battery Rechargeable (Secondary) 110mAh|CurrentPartId=1|DesignItemId=RJD2430C1ST1|DisplayModeCount=1|IndexInSheet=75|LibReference=RJD2430C1ST1|LibraryPath=*|Location.X=545|Location.Y=500|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=ZNKSHVEN|
+RECORD= 2|LINENO= 272|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=545|Location.Y=505|Name=+|Name_CustomPosition_Margin=-15|OwnerIndex=270|OwnerPartId=1|PinConglomerate=33|PinLength=5|PinName_PositionConglomerate=1|
+RECORD=41|LINENO= 273|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=545|Location.Y=505|Name=PinUniqueId|OwnerIndex=271|OwnerPartId=-1|Text=BPKSFYNY|UniqueID=LRURYVPE|
+RECORD= 2|LINENO= 274|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=545|Location.Y=490|Name=-|Name_CustomPosition_Margin=-15|OwnerIndex=270|OwnerPartId=1|PinConglomerate=35|PinLength=5|PinName_PositionConglomerate=5|
+RECORD=41|LINENO= 275|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=545|Location.Y=490|Name=PinUniqueId|OwnerIndex=273|OwnerPartId=-1|Text=VWVHPCQB|UniqueID=SOFCUJUU|
+RECORD= 6|LINENO= 276|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=2|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=270|OwnerPartId=1|X1=550|X2=540|Y1=500|Y2=500|
+RECORD= 6|LINENO= 277|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=3|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=270|OwnerPartId=1|X1=555|X2=535|Y1=495|Y2=495|
+RECORD= 6|LINENO= 278|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=4|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=270|OwnerPartId=1|X1=555|X2=535|Y1=505|Y2=505|
+RECORD= 6|LINENO= 279|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=5|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=270|OwnerPartId=1|X1=550|X2=540|Y1=490|Y2=490|
+RECORD= 4|LINENO= 280|OWNERPARTID= -42|OWNERINDEX= -42|FontID=4|IndexInSheet=6|IsNotAccesible=T|Justification=1|Location.X=548|Location.Y=505|OwnerIndex=270|OwnerPartId=1|Text=+|
+RECORD= 4|LINENO= 281|OWNERPARTID= -42|OWNERINDEX= -42|FontID=1|IndexInSheet=7|IsNotAccesible=T|Justification=1|Location.X=548|Location.Y=483|OwnerIndex=270|OwnerPartId=1|Text=-|
+RECORD=34|LINENO= 282|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=556|Location.Y=501|Name=Designator|OwnerIndex=270|OwnerPartId=-1|ReadOnlyState=1|Text=BAT1|UniqueID=NPUUXMQM|
+RECORD=41|LINENO= 283|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=556|Location.Y=491|Name=Comment|OwnerIndex=270|OwnerPartId=-1|Text=RJD2430C1ST1|UniqueID=PRLRPAAT|
+RECORD=44|LINENO= 284|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=270|
+RECORD=45|LINENO= 285|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=Coin, 24.5mm 3.7V Lithium-Ion Battery Rechargeable (Secondary) 110mAh|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=RJD2430C1ST1|ModelDatafileKind0=PCBLib|ModelName=RJD2430C1ST1|ModelType=PCBLIB|OwnerIndex=283|UniqueID=ISMJASOY|UseComponentLibrary=T|
+RECORD=46|LINENO= 286|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=284|
+RECORD=48|LINENO= 287|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=284|
+RECORD= 1|LINENO= 288|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=2 Position Spring Mating Target Connector Surface Mount|CurrentPartId=1|DesignItemId=800-10-002-30-507101|DisplayModeCount=1|IndexInSheet=76|IsMirrored=T|LibReference=800-10-002-30-507101|LibraryPath=*|Location.X=370|Location.Y=500|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=YYALOXEH|
+RECORD= 2|LINENO= 289|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Electrical=4|FormalType=1|Location.X=365|Location.Y=520|Name=1|OwnerIndex=287|OwnerPartId=1|PinConglomerate=32|PinLength=10|
+RECORD=41|LINENO= 290|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=365|Location.Y=520|Name=PinUniqueId|OwnerIndex=288|OwnerPartId=-1|Text=JJFQMOIH|UniqueID=JIDFWWHT|
+RECORD= 8|LINENO= 291|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=12632256|IndexInSheet=1|IsNotAccesible=T|IsSolid=T|LineWidth=1|Location.X=365|Location.Y=520|OwnerIndex=287|OwnerPartId=1|Radius=2|Radius_Frac=50000|SecondaryRadius=2|SecondaryRadius_Frac=50000|
+RECORD= 2|LINENO= 292|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Electrical=4|FormalType=1|Location.X=365|Location.Y=480|Name=2|OwnerIndex=287|OwnerPartId=1|PinConglomerate=32|PinLength=10|
+RECORD=41|LINENO= 293|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=365|Location.Y=480|Name=PinUniqueId|OwnerIndex=291|OwnerPartId=-1|Text=MXDESYGX|UniqueID=LSEWYVRD|
+RECORD= 8|LINENO= 294|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=12632256|IndexInSheet=3|IsNotAccesible=T|IsSolid=T|LineWidth=1|Location.X=365|Location.Y=480|OwnerIndex=287|OwnerPartId=1|Radius=2|Radius_Frac=50000|SecondaryRadius=2|SecondaryRadius_Frac=50000|
+RECORD=34|LINENO= 295|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|IsMirrored=T|Location.X=362|Location.X_Frac=50000|Location.Y=523|Name=Designator|OwnerIndex=287|OwnerPartId=-1|ReadOnlyState=1|Text=P1|UniqueID=HHHEFNSH|
+RECORD=41|LINENO= 296|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|IsMirrored=T|Location.X=362|Location.X_Frac=50000|Location.Y=467|Name=Comment|OwnerIndex=287|OwnerPartId=-1|Text=800-10-002-30-507101|UniqueID=QJAVQURJ|
+RECORD=44|LINENO= 297|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=287|
+RECORD=45|LINENO= 298|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=2 Position Spring Mating Target Connector Surface Mount|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=800-10-002-30-507101|ModelDatafileKind0=PCBLib|ModelName=800-10-002-30-507101|ModelType=PCBLIB|OwnerIndex=296|UniqueID=XHADCAQF|UseComponentLibrary=T|
+RECORD=46|LINENO= 299|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=297|
+RECORD=48|LINENO= 300|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=297|
+RECORD= 1|LINENO= 301|OWNERPARTID= -42|OWNERINDEX= -42|AllPinCount=2|AreaColor=11599871|Color=128|ComponentDescription=TVS DIODE 5V SOD923|CurrentPartId=1|DesignItemId=ESD9B5.0ST5G|DisplayModeCount=1|IndexInSheet=77|LibReference=ESD9B5.0ST5G|LibraryPath=*|Location.X=375|Location.Y=500|Orientation=1|OwnerPartId=-1|PartCount=2|PartIDLocked=T|SourceLibraryName=smLib.IntLib|TargetFileName=*|UniqueID=WGAQCUPX|
+RECORD= 2|LINENO= 302|OWNERPARTID= -42|OWNERINDEX= -42|Designator=1|Designator_CustomPosition_Margin=4|Electrical=4|FormalType=1|Location.X=375|Location.Y=485|Name=1|OwnerIndex=300|OwnerPartId=1|PinConglomerate=35|PinDesignator_PositionConglomerate=1|PinLength=5|
+RECORD=41|LINENO= 303|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=375|Location.Y=485|Name=PinUniqueId|OwnerIndex=301|OwnerPartId=-1|Text=KGBCMNSJ|UniqueID=AXTXRQJX|
+RECORD= 2|LINENO= 304|OWNERPARTID= -42|OWNERINDEX= -42|Designator=2|Designator_CustomPosition_Margin=3|Electrical=4|FormalType=1|Location.X=375|Location.Y=515|Name=2|OwnerIndex=300|OwnerPartId=1|PinConglomerate=33|PinDesignator_PositionConglomerate=1|PinLength=5|
+RECORD=41|LINENO= 305|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IsHidden=T|Location.X=375|Location.Y=515|Name=PinUniqueId|OwnerIndex=303|OwnerPartId=-1|Text=TCOFODWC|UniqueID=PDQRWGON|
+RECORD= 7|LINENO= 306|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=2|IsNotAccesible=T|IsSolid=T|LineWidth=1|LocationCount=3|OwnerIndex=300|OwnerPartId=1|X1=370|X2=380|X3=375|Y1=485|Y2=485|Y3=495|
+RECORD= 6|LINENO= 307|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=3|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=370|X2=380|Y1=495|Y2=495|
+RECORD= 6|LINENO= 308|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=4|IsNotAccesible=T|LineStyle=1|LineStyleExt=1|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=370|X2=370|Y1=495|Y2=493|
+RECORD= 6|LINENO= 309|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=5|IsNotAccesible=T|LineStyle=1|LineStyleExt=1|LineWidth=1|LocationCount=3|OwnerIndex=300|OwnerPartId=1|X1=380|X2=380|X3=379|Y1=495|Y2=497|Y3=497|
+RECORD= 6|LINENO= 310|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=6|IsNotAccesible=T|LineStyle=1|LineStyleExt=1|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=380|X2=379|Y1=497|Y2=497|
+RECORD= 6|LINENO= 311|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=7|IsNotAccesible=T|LineStyle=1|LineStyleExt=1|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=370|X2=371|Y1=493|Y2=493|
+RECORD= 7|LINENO= 312|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=8|IsNotAccesible=T|IsSolid=T|LineWidth=1|LocationCount=3|OwnerIndex=300|OwnerPartId=1|X1=380|X2=370|X3=375|Y1=515|Y2=515|Y3=505|
+RECORD= 6|LINENO= 313|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=9|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=380|X2=370|Y1=505|Y2=505|
+RECORD= 6|LINENO= 314|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=10|IsNotAccesible=T|LineStyle=1|LineStyleExt=1|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=380|X2=380|Y1=505|Y2=507|
+RECORD= 6|LINENO= 315|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=11|IsNotAccesible=T|LineStyle=1|LineStyleExt=1|LineWidth=1|LocationCount=3|OwnerIndex=300|OwnerPartId=1|X1=370|X2=370|X3=371|Y1=505|Y2=503|Y3=503|
+RECORD= 6|LINENO= 316|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=12|IsNotAccesible=T|LineStyle=1|LineStyleExt=1|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=370|X2=371|Y1=503|Y2=503|
+RECORD= 6|LINENO= 317|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=13|IsNotAccesible=T|LineStyle=1|LineStyleExt=1|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=380|X2=379|Y1=507|Y2=507|
+RECORD= 6|LINENO= 318|OWNERPARTID= -42|OWNERINDEX= -42|IndexInSheet=14|IsNotAccesible=T|LineWidth=1|LocationCount=2|OwnerIndex=300|OwnerPartId=1|X1=375|X2=375|Y1=505|Y2=495|
+RECORD=34|LINENO= 319|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=385|Location.Y=490|Name=Designator|OwnerIndex=300|OwnerPartId=-1|ReadOnlyState=1|Text=D1|UniqueID=RCLPHMNM|
+RECORD=41|LINENO= 320|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|FontID=1|IndexInSheet=-1|Location.X=385|Location.Y=480|Name=Comment|OwnerIndex=300|OwnerPartId=-1|Text=ESD9B5.0ST5G|UniqueID=QNAVVEXE|
+RECORD=44|LINENO= 321|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=300|
+RECORD=45|LINENO= 322|OWNERPARTID= -42|OWNERINDEX= -42|DatabaseDatalinksLocked=T|DatabaseModel=T|DatafileCount=1|DatalinksLocked=T|Description=TVS DIODE 5V SOD923|IndexInSheet=-1|IntegratedModel=T|IsCurrent=T|ModelDatafileEntity0=ESD9B5.0ST5G|ModelDatafileKind0=PCBLib|ModelName=ESD9B5.0ST5G|ModelType=PCBLIB|OwnerIndex=320|UniqueID=KHEXVHMD|UseComponentLibrary=T|
+RECORD=46|LINENO= 323|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=321|
+RECORD=48|LINENO= 324|OWNERPARTID= -42|OWNERINDEX= -42|OwnerIndex=321|
+RECORD=27|LINENO= 325|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=78|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=ZLBFLORT|X1=455|X2=455|X3=375|Y1=490|Y2=480|Y3=480|
+RECORD=27|LINENO= 326|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=79|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=KYGVQSCD|X1=455|X2=455|X3=435|Y1=510|Y2=520|Y3=520|
+RECORD=14|LINENO= 327|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=11599871|Corner.X=500|Corner.Y=545|IndexInSheet=80|LineWidth=3|Location.X=330|Location.Y=445|OwnerPartId=-1|
+RECORD=14|LINENO= 328|OWNERPARTID= -42|OWNERINDEX= -42|AreaColor=11599871|Corner.X=500|Corner.Y=580|IndexInSheet=81|LineWidth=3|Location.X=330|Location.Y=545|OwnerPartId=-1|
+RECORD= 4|LINENO= 329|OWNERPARTID= -42|OWNERINDEX= -42|FontID=3|IndexInSheet=82|Justification=1|Location.X=415|Location.Y=550|OwnerPartId=-1|Text=CHARGER INPUT|
+RECORD=27|LINENO= 330|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=83|LineWidth=1|LocationCount=2|OwnerPartId=-1|UniqueID=ESSWIBJP|X1=545|X2=545|Y1=510|Y2=520|
+RECORD=27|LINENO= 331|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=84|LineWidth=1|LocationCount=2|OwnerPartId=-1|UniqueID=UQWZZISA|X1=545|X2=545|Y1=485|Y2=480|
+RECORD=27|LINENO= 332|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=85|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=KMPGZKKH|X1=565|X2=585|X3=585|Y1=335|Y2=335|Y3=320|
+RECORD=27|LINENO= 333|OWNERPARTID= -42|OWNERINDEX= -42|Color=8388608|IndexInSheet=86|LineWidth=1|LocationCount=3|OwnerPartId=-1|UniqueID=HIYCDQAE|X1=575|X2=575|X3=565|Y1=285|Y2=325|Y3=325|
+RECORD=29|LINENO= 334|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=375|Location.Y=480|OwnerPartId=-1|
+RECORD=29|LINENO= 335|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=375|Location.Y=520|OwnerPartId=-1|
+RECORD=29|LINENO= 336|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=390|Location.Y=285|OwnerPartId=-1|
+RECORD=29|LINENO= 337|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=400|Location.Y=285|OwnerPartId=-1|
+RECORD=29|LINENO= 338|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=420|Location.Y=305|OwnerPartId=-1|
+RECORD=29|LINENO= 339|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=435|Location.Y=285|OwnerPartId=-1|
+RECORD=29|LINENO= 340|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=445|Location.Y=285|OwnerPartId=-1|
+RECORD=29|LINENO= 341|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=455|Location.Y=480|OwnerPartId=-1|
+RECORD=29|LINENO= 342|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=455|Location.Y=520|OwnerPartId=-1|
+RECORD=29|LINENO= 343|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=460|Location.Y=305|OwnerPartId=-1|
+RECORD=29|LINENO= 344|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=480|Location.Y=285|OwnerPartId=-1|
+RECORD=29|LINENO= 345|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=575|Location.Y=285|OwnerPartId=-1|
+RECORD=29|LINENO= 346|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=585|Location.Y=285|OwnerPartId=-1|
+RECORD=29|LINENO= 347|OWNERPARTID= -42|OWNERINDEX= -42|Color=128|IndexInSheet=-1|Location.X=585|Location.Y=335|OwnerPartId=-1|
