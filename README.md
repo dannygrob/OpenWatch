@@ -17,3 +17,5 @@ Connect a J-Link mini or similar to the pads, and don't forget to connect VREF t
 For debugging connect the RX TX too. Maybe best to start with the [Development Kit USB](https://www.dialog-semiconductor.com/products/da14683-development-kit-usb)
 
 You can use Smart Snipets Toolbox (after running the code once, it creates the partitions on flash) to load the images (picturefiles.txt) to the flash partition (NVMS_FLASH_STORAGE). These where created with Samson's biptmap loader tool found in the original git.
+
+Small video of the watch in action [found here](https://streamable.com/83sec)
