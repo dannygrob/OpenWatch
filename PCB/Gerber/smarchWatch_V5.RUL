@@ -1,4 +1,4 @@
-DRC Rules Export File for PCB: C:\Users\prog\Desktop\Watch\Altium Files\smarchWatch_V5.PcbDoc
+DRC Rules Export File for PCB: E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc
 RuleKind=Clearance|RuleName=Clearance_ANT|Scope=Board|Minimum=78.74
 RuleKind=Clearance|RuleName=Clearance_Castellated|Scope=Board|Minimum=0.00
 RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
