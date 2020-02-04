@@ -1,0 +1,26 @@
+/*
+ * imageOffsets.h
+ *
+ *  Created on: Jan 23, 2019
+ *      Author: samsonm
+ */
+#ifndef IMAGEOFFSETS_H_
+#define IMAGEOFFSETS_H_
+
+#define ZBOOTSCREEN_OFFSET 0
+#define WATCHFACE_OFFSET 115202
+#define MENU_ICONS_OFFSET 230404
+#define MEDIUMFONT_OFFSET 307206
+#define LIGHTFONT_OFFSET 437768
+#define FONT_OFFSET 568330
+#define CLOCKFONT_OFFSET 697364
+#define CHARGING_OFFSET 731926
+
+#define TOTAL_MEMORY_USED 847128
+#define TOTAL_MEMORY_AVAILABLE 15930088
+#define TOTAL_MEMORY_PERCENT USED 5
+//Time to load all data at 57600 baud: 117 seconds
+
+
+
+#endif /* IMAGEOFFSETS_H_ */
