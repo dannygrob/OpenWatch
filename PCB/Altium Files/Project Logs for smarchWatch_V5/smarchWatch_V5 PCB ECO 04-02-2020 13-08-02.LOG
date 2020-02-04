@@ -1,0 +1,20 @@
+Change Component Comment : Designator=R10 Old Comment=330 New Comment=0
+Change Component Designator: OldDesignator=U1 NewDesignator=X1
+Change Component Designator: OldDesignator=X? NewDesignator=X2
+Added Pin To Net: NetName=LED_K Pin=X1-1
+Added Pin To Net: NetName=LED_K Pin=X1-2
+Added Pin To Net: NetName=GND Pin=X1-3
+Added Pin To Net: NetName=GND Pin=X1-4
+Added Pin To Net: NetName=DISPLAY_MOSI Pin=X1-6
+Added Pin To Net: NetName=DISPLAY_CLK Pin=X1-8
+Added Pin To Net: NetName=DISPLAY_CS Pin=X1-9
+Added Pin To Net: NetName=DISPLAY_RST Pin=X1-10
+Added Pin To Net: NetName=3V3 Pin=X1-11
+Added Pin To Net: NetName=3V3 Pin=X1-12
+Added Pin To Net: NetName=3V3 Pin=X1-13
+Added Pin To Net: NetName=3V3 Pin=X1-14
+Added Pin To Net: NetName=GND Pin=X1-15
+Added Pin To Net: NetName=GND Pin=X1-16
+Added Pin To Net: NetName=3V3 Pin=X1-23
+Added Pin To Net: NetName=3V3 Pin=X1-24
+Added Member To Class: ClassName=Actuators Member=Component X1 AML130A2402A

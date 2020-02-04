@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: smarchWatch_V5.PcbDoc   1/13/2020  1:18:49 PM
+NCDrill File Report For: smarchWatch_V5.PcbDoc   04/02/2020  15:12:54
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -7,13 +7,13 @@ ASCII RoundHoles File : smarchWatch_V5.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      8mil (0.203mm)                                            Round             80        PTH        0.00inch (0.00mm)
+T1      8mil (0.203mm)                                            Round             82        PTH        0.00inch (0.00mm)
 T2      10mil (0.254mm)                                           Round             4         PTH        0.00inch (0.00mm)
 T3      12mil (0.305mm)                                           Round             46        PTH        0.00inch (0.00mm)
 T4      40mil (1.021mm)                                           Round             1         PTH        0.00inch (0.00mm)
 T5      79mil (1.999mm)                                           Round             2         PTH        0.00inch (0.00mm)
 T6      94mil (2.4mm)                                             Round             2         NPTH       0.00inch (0.00mm)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              135
+Totals                                                                              137
 
-Total Processing Time (hh:mm:ss) : 00:00:00
+Total Processing Time (hh:mm:ss) : 00:00:01

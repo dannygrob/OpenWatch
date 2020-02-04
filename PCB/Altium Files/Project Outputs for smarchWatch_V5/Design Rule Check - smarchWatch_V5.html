@@ -1,0 +1,772 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\AltiumShared\AD20\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">04/02/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">13:03:31</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc" class="file"><acronym title="E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc">E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">4</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">128</td></tr>
+</table>
+</td>
+</table><a name="IDUI4QGZKMJDT0NPJNX3WEEOJTQF33MGN4BCXVOSOLKNHLFUXCQHCH"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3JOVTNMGAHZQJQ0B0X2VBQYCDCGMHDEUVM4QDWJRAWXDJ5AT1I2B">Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">4</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQKVARP5UUF4RCBDFCRAQON3TJHEWQY1RRI0N22B0BZG3DV5SY1Q">Clearance Constraint (Gap=0mm) ((InComponent('CH_GND') OR InComponent('CH_VIN') OR InNet('5V')) OR InComponent('TX') OR InComponent('RX') OR (IsTrack AND InNet('TX')) OR (IsTrack AND InNet('RX')) OR InComponent('VBAT') OR InComponent('GND') OR (IsTrack AND InNet('VBAT')) OR InComponent('ANT1') OR (IsTrack AND InNet('ANT'))),(IsKeepOut)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDN1ZUH1GNNJGKLAYO24F2LOR5ZBNOY1LYS5EBL4NPZXFMLDA5OTFF">Clearance Constraint (Gap=2mm) (InComponent('ANT1')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOZGWUYZDIRERJRJPXKAR4GY4RBZFVUYVNID3ZPECAMV0EXE4ENKM">Clearance Constraint (Gap=0.102mm) (All),(All)</a></td>
+<td class="column2">13</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDG2XJ23ANQESQD5W05Z3KSVUKMPU3S4EQ50HFLRLKEZHV1GVLTQNJ">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXDRT2Q3XRB0QODEFLNXI3ACBQJQND3JSXNWXXFKTN0UJZSB0UVJK">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAMY2LP3H4VUPI2MBZFYSH4KD4GV2HBLTM2ATT2F2YIBHRPCEAFRM">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0FU33AKIBQ4RBMZSNBGQFU3EFNCCYY14XVGIFEMUVLPQ1SMNHYGD">Width Constraint (Min=0.102mm) (Max=25.4mm) (Preferred=0.203mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFJKUWL1KPCJZ5NO3B5BVPCPPNGW5COZUTIKGVIA0RFQD0BVAWIO">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDI03GLUU144EULP5NPMEP4NK3PKADWYER4EVIRKGFFYTQOONGW5IN">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDE55G3Q3FKHRRMZPOVJNRUKXK5DSFQGSOUV0TWBNMVZZL315JSECI">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDST5DLCPJNLWWEYCQNW5NPEXVWPIQHRFETEJTP0C4E4ZLYBZMOUCD">Minimum Solder Mask Sliver (Gap=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0SH0MHWYUSGPB24A0R0UM2ZH1PP0J1UQ5YOK5UD1ZS5YTAWENQZL">Silk To Solder Mask (Clearance=0mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUADTNS3SDA2CPSL0NKWIFQIHFMGDBFMYUMA2OLPOQDFMOBKILHUP">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBXG3OZRQLWZFNIIKYMJWW3W5DIJ1AZHILCYGIQI2CZ5FSAWMMADM">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">96</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOVGMWUWAFROD40O0HC3NF20EBCLMBOYQHPJTHELDPB0L2E1UUCP">Board Clearance Constraint (Gap=0mm) (OnLayer('Bottom Overlay') or OnLayer('Top Overlay'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNKTADCWC3XI1OWDMTKIHLOBQNEJBYQTSB5TA4IXRU1BT1BZ44DH">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEGEJDRTA4R20HAW2LU1PMVHY4DG0FBCBESRVFIHTVMJC1TEPYH2G">Board Clearance Constraint (Gap=0mm) (InNamedPolygon('TOUCH_6') or  InNamedPolygon('TOUCH_7') or  InNamedPolygon('TOUCH_8') or  InNamedPolygon('TOUCH_8') or  InNamedPolygon('TOUCH_SOLDER_6') or  InNamedPolygon('TOUCH_SOLDER_7') or  InNamedPolygon('TOUCH_SOLDER_8') or  InNamedPolygon('TOUCH_SOLDER_8') or InComponent('CT_1') or  InComponent('CT_2') or   InComponent('CT_3') or   InComponent('CT_4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCNQGGLY531ACI0QE0NKKNGHARHZTL2ABD4G0HXOZRUQAE4ONJIKO">Board Clearance Constraint (Gap=0mm) ((InComponent('CH_GND') OR InComponent('CH_VIN') OR InNet('5V')) OR InComponent('TX') OR InComponent('RX') OR (IsTrack AND InNet('TX')) OR (IsTrack AND InNet('RX')) OR InComponent('VBAT') OR InComponent('GND') OR (IsTrack AND InNet('VBAT')) OR InComponent('ANT1') OR (IsTrack AND InNet('ANT')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEPSTVFHFRWKXBJPEYEFBM5TMLHA1VBRYJYZ3N1IEET4HBM2H4WRH">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">128</td>
+</tr>
+</table><br><a name="IDZUH24XUCQ0C0ESHGEIEIOE4QLG1WZN0U054XJWNBJBTE4JCQHHFK"><h2>Warnings</h2></a><a name="ID3JOVTNMGAHZQJQ0B0X2VBQYCDCGMHDEUVM4QDWJRAWXDJ5AT1I2B"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Polygon named: INNER1-GND In net GND On Signal Layer 1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Polygon named: INNER2_GND In net GND On Signal Layer 2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Polygon named: BOTTOM_3V3 In net 3V3 On Bottom Layer</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Polygon named: TOP_GND In net GND On Top Layer</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDOZGWUYZDIRERJRJPXKAR4GY4RBZFVUYVNID3ZPECAMV0EXE4ENKM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.102mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.031mil|Location2.X=47355.281mil|Location1.Y=36439.456mil|Location2.Y=36444.706mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.031mil|Location2.X=47355.281mil|Location1.Y=36439.456mil|Location2.Y=36444.706mil|Absolute=True">Clearance Constraint: (0.047mm &lt; 0.102mm) Between Pad R5-1(8.965mm,2.665mm) on Top Layer And Track (9.464mm,2.339mm)(9.819mm,1.983mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47383.757mil|Location2.X=47387.424mil|Location1.Y=36412.236mil|Location2.Y=36415.903mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47383.757mil|Location2.X=47387.424mil|Location1.Y=36412.236mil|Location2.Y=36415.903mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Pad U2-4(10.175mm,1.29mm) on Top Layer And Track (9.819mm,1.983mm)(10.175mm,1.627mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46770.647mil|Location2.X=46774.314mil|Location1.Y=35883.565mil|Location2.Y=35887.232mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46770.647mil|Location2.X=46774.314mil|Location1.Y=35883.565mil|Location2.Y=35887.232mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Pad X?-10(-5.395mm,-11.79mm) on Top Layer And Track (-5.398mm,-11.801mm)(-5.385mm,-11.787mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46770.647mil|Location2.X=46774.314mil|Location1.Y=35875.692mil|Location2.Y=35879.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46770.647mil|Location2.X=46774.314mil|Location1.Y=35875.692mil|Location2.Y=35879.358mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Pad X?-10(-5.395mm,-11.79mm) on Top Layer And Track (-5.398mm,-12.001mm)(-5.398mm,-11.801mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46723.403mil|Location2.X=46727.07mil|Location1.Y=35982.005mil|Location2.Y=35985.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46723.403mil|Location2.X=46727.07mil|Location1.Y=35982.005mil|Location2.Y=35985.672mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Pad X?-4(-6.595mm,-9.297mm) on Top Layer And Track (-6.598mm,-10.075mm)(-6.598mm,-9.3mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46723.403mil|Location2.X=46727.07mil|Location1.Y=35973.821mil|Location2.Y=35977.488mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46723.403mil|Location2.X=46727.07mil|Location1.Y=35973.821mil|Location2.Y=35977.488mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Pad X?-4(-6.595mm,-9.297mm) on Top Layer And Track (-6.598mm,-9.508mm)(-6.585mm,-9.522mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47383.757mil|Location2.X=47387.424mil|Location1.Y=36412.236mil|Location2.Y=36415.903mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47383.757mil|Location2.X=47387.424mil|Location1.Y=36412.236mil|Location2.Y=36415.903mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Track (10.175mm,1.29mm)(10.175mm,1.627mm) on Top Layer And Track (9.819mm,1.983mm)(10.175mm,1.627mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46856.828mil|Location2.X=46860.495mil|Location1.Y=36352.379mil|Location2.Y=36356.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46856.828mil|Location2.X=46860.495mil|Location1.Y=36352.379mil|Location2.Y=36356.046mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Track (-3.118mm,0.107mm)(-2.607mm,0.618mm) on Top Layer And Via (-3.3mm,0.107mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46853.245mil|Location2.X=46856.912mil|Location1.Y=36352.379mil|Location2.Y=36356.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46853.245mil|Location2.X=46856.912mil|Location1.Y=36352.379mil|Location2.Y=36356.046mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Track (-3.3mm,0.107mm)(-3.118mm,0.107mm) on Top Layer And Via (-3.3mm,0.107mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46723.403mil|Location2.X=46727.07mil|Location1.Y=35951.513mil|Location2.Y=35955.18mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46723.403mil|Location2.X=46727.07mil|Location1.Y=35951.513mil|Location2.Y=35955.18mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Track (-6.598mm,-10.075mm)(-6.598mm,-9.3mm) on Top Layer And Track (-6.598mm,-10.676mm)(-6.598mm,-9.827mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46723.403mil|Location2.X=46727.07mil|Location1.Y=35973.821mil|Location2.Y=35977.488mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46723.403mil|Location2.X=46727.07mil|Location1.Y=35973.821mil|Location2.Y=35977.488mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Track (-6.598mm,-10.075mm)(-6.598mm,-9.3mm) on Top Layer And Track (-6.598mm,-9.508mm)(-6.585mm,-9.522mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.031mil|Location2.X=47355.281mil|Location1.Y=36439.456mil|Location2.Y=36444.706mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.031mil|Location2.X=47355.281mil|Location1.Y=36439.456mil|Location2.Y=36444.706mil|Absolute=True">Clearance Constraint: (0.047mm &lt; 0.102mm) Between Track (8.965mm,2.587mm)(9.213mm,2.339mm) on Top Layer And Track (9.464mm,2.339mm)(9.819mm,1.983mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47355.746mil|Location2.X=47359.412mil|Location1.Y=36440.248mil|Location2.Y=36443.914mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47355.746mil|Location2.X=47359.412mil|Location1.Y=36440.248mil|Location2.Y=36443.914mil|Absolute=True">Clearance Constraint: (Collision &lt; 0.102mm) Between Track (9.213mm,2.339mm)(9.464mm,2.339mm) on Top Layer And Track (9.464mm,2.339mm)(9.819mm,1.983mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDG2XJ23ANQESQD5W05Z3KSVUKMPU3S4EQ50HFLRLKEZHV1GVLTQNJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47377.208mil|Location2.X=47392.146mil|Location1.Y=36405.795mil|Location2.Y=36420.732mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47377.208mil|Location2.X=47392.146mil|Location1.Y=36405.795mil|Location2.Y=36420.732mil|Absolute=True">Short-Circuit Constraint: Between Pad U2-4(10.175mm,1.29mm) on Top Layer And Track (9.819mm,1.983mm)(10.175mm,1.627mm) on Top Layer Location : [X = 1203.571mm][Y = 924.897mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46765.103mil|Location2.X=46780.385mil|Location1.Y=35878.022mil|Location2.Y=35893.303mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46765.103mil|Location2.X=46780.385mil|Location1.Y=35878.022mil|Location2.Y=35893.303mil|Absolute=True">Short-Circuit Constraint: Between Pad X?-10(-5.395mm,-11.79mm) on Top Layer And Track (-5.398mm,-11.801mm)(-5.385mm,-11.787mm) on Top Layer Location : [X = 1188.028mm][Y = 911.496mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46761.987mil|Location2.X=46782.974mil|Location1.Y=35870.969mil|Location2.Y=35891.955mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46761.987mil|Location2.X=46782.974mil|Location1.Y=35870.969mil|Location2.Y=35891.955mil|Absolute=True">Short-Circuit Constraint: Between Pad X?-10(-5.395mm,-11.79mm) on Top Layer And Track (-5.398mm,-12.001mm)(-5.398mm,-11.801mm) on Top Layer Location : [X = 1188.021mm][Y = 911.389mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46714.055mil|Location2.X=46736.654mil|Location1.Y=35968.947mil|Location2.Y=35991.545mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46714.055mil|Location2.X=46736.654mil|Location1.Y=35968.947mil|Location2.Y=35991.545mil|Absolute=True">Short-Circuit Constraint: Between Pad X?-4(-6.595mm,-9.297mm) on Top Layer And Track (-6.598mm,-10.075mm)(-6.598mm,-9.3mm) on Top Layer Location : [X = 1186.824mm][Y = 913.898mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46718.035mil|Location2.X=46732.965mil|Location1.Y=35968.18mil|Location2.Y=35983.109mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46718.035mil|Location2.X=46732.965mil|Location1.Y=35968.18mil|Location2.Y=35983.109mil|Absolute=True">Short-Circuit Constraint: Between Pad X?-4(-6.595mm,-9.297mm) on Top Layer And Track (-6.598mm,-9.508mm)(-6.585mm,-9.522mm) on Top Layer Location : [X = 1186.828mm][Y = 913.781mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47378.323mil|Location2.X=47392.858mil|Location1.Y=36406.802mil|Location2.Y=36421.337mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47378.323mil|Location2.X=47392.858mil|Location1.Y=36406.802mil|Location2.Y=36421.337mil|Absolute=True">Short-Circuit Constraint: Between Track (10.175mm,1.29mm)(10.175mm,1.627mm) on Top Layer And Track (9.819mm,1.983mm)(10.175mm,1.627mm) on Top Layer Location : [X = 1203.594mm][Y = 924.917mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46857.03mil|Location2.X=46868.336mil|Location1.Y=36349.853mil|Location2.Y=36361.159mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46857.03mil|Location2.X=46868.336mil|Location1.Y=36349.853mil|Location2.Y=36361.159mil|Absolute=True">Short-Circuit Constraint: Between Track (-3.118mm,0.107mm)(-2.607mm,0.618mm) on Top Layer And Via (-3.3mm,0.107mm) from Top Layer to Bottom Layer Location : [X = 1190.312mm][Y = 923.43mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46851.181mil|Location2.X=46866.141mil|Location1.Y=36346.732mil|Location2.Y=36361.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46851.181mil|Location2.X=46866.141mil|Location1.Y=36346.732mil|Location2.Y=36361.693mil|Absolute=True">Short-Circuit Constraint: Between Track (-3.3mm,0.107mm)(-3.118mm,0.107mm) on Top Layer And Via (-3.3mm,0.107mm) from Top Layer to Bottom Layer Location : [X = 1190.21mm][Y = 923.397mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46713.418mil|Location2.X=46737.055mil|Location1.Y=35945.908mil|Location2.Y=35969.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46713.418mil|Location2.X=46737.055mil|Location1.Y=35945.908mil|Location2.Y=35969.546mil|Absolute=True">Short-Circuit Constraint: Between Track (-6.598mm,-10.075mm)(-6.598mm,-9.3mm) on Top Layer And Track (-6.598mm,-10.676mm)(-6.598mm,-9.827mm) on Top Layer Location : [X = 1186.821mm][Y = 913.326mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46717.859mil|Location2.X=46733.141mil|Location1.Y=35967.75mil|Location2.Y=35983.032mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46717.859mil|Location2.X=46733.141mil|Location1.Y=35967.75mil|Location2.Y=35983.032mil|Absolute=True">Short-Circuit Constraint: Between Track (-6.598mm,-10.075mm)(-6.598mm,-9.3mm) on Top Layer And Track (-6.598mm,-9.508mm)(-6.585mm,-9.522mm) on Top Layer Location : [X = 1186.828mm][Y = 913.775mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.311mil|Location2.X=47364.847mil|Location1.Y=36434.813mil|Location2.Y=36449.349mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.311mil|Location2.X=47364.847mil|Location1.Y=36434.813mil|Location2.Y=36449.349mil|Absolute=True">Short-Circuit Constraint: Between Track (9.213mm,2.339mm)(9.464mm,2.339mm) on Top Layer And Track (9.464mm,2.339mm)(9.819mm,1.983mm) on Top Layer Location : [X = 1202.883mm][Y = 925.629mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDXDRT2Q3XRB0QODEFLNXI3ACBQJQND3JSXNWXXFKTN0UJZSB0UVJK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46732.575mil|Location2.X=46781.126mil|Location1.Y=35869.425mil|Location2.Y=35902.228mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46732.575mil|Location2.X=46781.126mil|Location1.Y=35869.425mil|Location2.Y=35902.228mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad X?-8(-6.195mm,-11.79mm) on Top Layer And Pad X?-10(-5.395mm,-11.79mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46625.354mil|Location2.X=46825.764mil|Location1.Y=35785.827mil|Location2.Y=36075.127mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46625.354mil|Location2.X=46825.764mil|Location1.Y=35785.827mil|Location2.Y=36075.127mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad X?-7(-6.595mm,-11.79mm) on Top Layer And Track (-6.598mm,-9.508mm)(-6.585mm,-9.522mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47257.579mil|Location2.X=47485.591mil|Location1.Y=36342.081mil|Location2.Y=36514.07mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47257.579mil|Location2.X=47485.591mil|Location1.Y=36342.081mil|Location2.Y=36514.07mil|Absolute=True">Un-Routed Net Constraint: Net I2C_SCL Between Track (9.213mm,2.339mm)(9.464mm,2.339mm) on Top Layer And Track (10.175mm,1.29mm)(10.175mm,1.627mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46592.676mil|Location2.X=46873.008mil|Location1.Y=35827.755mil|Location2.Y=35985.926mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46592.676mil|Location2.X=46873.008mil|Location1.Y=35827.755mil|Location2.Y=35985.926mil|Absolute=True">Un-Routed Net Constraint: Net I2C_SCL Between Via (-7.425mm,-10.725mm) from Top Layer to Bottom Layer And Track (-5.398mm,-11.801mm)(-5.385mm,-11.787mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDAMY2LP3H4VUPI2MBZFYSH4KD4GV2HBLTM2ATT2F2YIBHRPCEAFRM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Modified Polygon (Allow modified: No), (Allow shelved: No)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46335.394mil|Location2.X=47634.606mil|Location1.Y=35759.449mil|Location2.Y=36940.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46335.394mil|Location2.X=47634.606mil|Location1.Y=35759.449mil|Location2.Y=36940.551mil|Absolute=True">Modified Polygon: Polygon Shelved  (BOTTOM_3V3) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46335.394mil|Location2.X=47634.606mil|Location1.Y=35759.449mil|Location2.Y=36940.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46335.394mil|Location2.X=47634.606mil|Location1.Y=35759.449mil|Location2.Y=36940.551mil|Absolute=True">Modified Polygon: Polygon Shelved  (INNER1-GND) on Signal Layer 1 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46335.394mil|Location2.X=47634.606mil|Location1.Y=35759.449mil|Location2.Y=36940.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46335.394mil|Location2.X=47634.606mil|Location1.Y=35759.449mil|Location2.Y=36940.551mil|Absolute=True">Modified Polygon: Polygon Shelved  (INNER2_GND) on Signal Layer 2 </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46335.394mil|Location2.X=47634.606mil|Location1.Y=35759.449mil|Location2.Y=36940.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46335.394mil|Location2.X=47634.606mil|Location1.Y=35759.449mil|Location2.Y=36940.551mil|Absolute=True">Modified Polygon: Polygon Shelved  (TOP_GND) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBXG3OZRQLWZFNIIKYMJWW3W5DIJ1AZHILCYGIQI2CZ5FSAWMMADM"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46960.289mil|Location2.X=46981.701mil|Location1.Y=36139.266mil|Location2.Y=36169.875mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46960.289mil|Location2.X=46981.701mil|Location1.Y=36139.266mil|Location2.Y=36169.875mil|Absolute=True">Net Antennae: Track (-0.437mm,-5.763mm)(-0.437mm,-5.162mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46960.24mil|Location2.X=46981.652mil|Location1.Y=36243.547mil|Location2.Y=36274.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46960.24mil|Location2.X=46981.652mil|Location1.Y=36243.547mil|Location2.Y=36274.157mil|Absolute=True">Net Antennae: Track (-0.438mm,-2.904mm)(-0.438mm,-2.513mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46945.547mil|Location2.X=46966.959mil|Location1.Y=36243.547mil|Location2.Y=36274.156mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46945.547mil|Location2.X=46966.959mil|Location1.Y=36243.547mil|Location2.Y=36274.156mil|Absolute=True">Net Antennae: Track (-0.812mm,-2.957mm)(-0.812mm,-2.513mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46945.02mil|Location2.X=46966.431mil|Location1.Y=36139.744mil|Location2.Y=36170.353mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46945.02mil|Location2.X=46966.431mil|Location1.Y=36139.744mil|Location2.Y=36170.353mil|Absolute=True">Net Antennae: Track (-0.825mm,-5.644mm)(-0.825mm,-5.15mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46937.5mil|Location2.X=46958.912mil|Location1.Y=36427.5mil|Location2.Y=36458.109mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46937.5mil|Location2.X=46958.912mil|Location1.Y=36427.5mil|Location2.Y=36458.109mil|Absolute=True">Net Antennae: Track (-1.016mm,2.159mm)(4.504mm,2.159mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47025.76mil|Location2.X=47042.818mil|Location1.Y=36141.744mil|Location2.Y=36165.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47025.76mil|Location2.X=47042.818mil|Location1.Y=36141.744mil|Location2.Y=36165.173mil|Absolute=True">Net Antennae: Track (1.175mm,-5.15mm)(1.175mm,-4.551mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47056.764mil|Location2.X=47073.822mil|Location1.Y=36141.252mil|Location2.Y=36164.681mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47056.764mil|Location2.X=47073.822mil|Location1.Y=36141.252mil|Location2.Y=36164.681mil|Absolute=True">Net Antennae: Track (1.963mm,-5.763mm)(1.963mm,-5.162mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47071.004mil|Location2.X=47092.416mil|Location1.Y=36244.075mil|Location2.Y=36274.684mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47071.004mil|Location2.X=47092.416mil|Location1.Y=36244.075mil|Location2.Y=36274.684mil|Absolute=True">Net Antennae: Track (2.375mm,-2.5mm)(2.375mm,-1.585mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47073.004mil|Location2.X=47090.062mil|Location1.Y=36141.744mil|Location2.Y=36165.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47073.004mil|Location2.X=47090.062mil|Location1.Y=36141.744mil|Location2.Y=36165.173mil|Absolute=True">Net Antennae: Track (2.375mm,-5.15mm)(2.375mm,-4.476mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47086.752mil|Location2.X=47108.164mil|Location1.Y=36244.075mil|Location2.Y=36274.684mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47086.752mil|Location2.X=47108.164mil|Location1.Y=36244.075mil|Location2.Y=36274.684mil|Absolute=True">Net Antennae: Track (2.775mm,-2.5mm)(2.775mm,-1.733mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47088.752mil|Location2.X=47105.81mil|Location1.Y=36141.744mil|Location2.Y=36165.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47088.752mil|Location2.X=47105.81mil|Location1.Y=36141.744mil|Location2.Y=36165.173mil|Absolute=True">Net Antennae: Track (2.775mm,-5.775mm)(2.775mm,-5.15mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47103.028mil|Location2.X=47124.439mil|Location1.Y=36243.547mil|Location2.Y=36274.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47103.028mil|Location2.X=47124.439mil|Location1.Y=36243.547mil|Location2.Y=36274.157mil|Absolute=True">Net Antennae: Track (3.188mm,-2.981mm)(3.188mm,-2.513mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47102.69mil|Location2.X=47124.102mil|Location1.Y=36139.554mil|Location2.Y=36170.163mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47102.69mil|Location2.X=47124.102mil|Location1.Y=36139.554mil|Location2.Y=36170.163mil|Absolute=True">Net Antennae: Track (3.18mm,-5.38mm)(3.18mm,-5.155mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46849.579mil|Location2.X=46866.636mil|Location1.Y=36348.713mil|Location2.Y=36372.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46849.579mil|Location2.X=46866.636mil|Location1.Y=36348.713mil|Location2.Y=36372.142mil|Absolute=True">Net Antennae: Track (-3.3mm,0.107mm)(-3.118mm,0.107mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47117.721mil|Location2.X=47139.132mil|Location1.Y=36243.547mil|Location2.Y=36274.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47117.721mil|Location2.X=47139.132mil|Location1.Y=36243.547mil|Location2.Y=36274.157mil|Absolute=True">Net Antennae: Track (3.562mm,-2.831mm)(3.562mm,-2.513mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47118.247mil|Location2.X=47139.659mil|Location1.Y=36139.743mil|Location2.Y=36170.353mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47118.247mil|Location2.X=47139.659mil|Location1.Y=36139.743mil|Location2.Y=36170.353mil|Absolute=True">Net Antennae: Track (3.575mm,-5.775mm)(3.575mm,-5.15mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46764.98mil|Location2.X=46786.392mil|Location1.Y=35877.899mil|Location2.Y=35908.508mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46764.98mil|Location2.X=46786.392mil|Location1.Y=35877.899mil|Location2.Y=35908.508mil|Absolute=True">Net Antennae: Track (-5.398mm,-11.801mm)(-5.385mm,-11.787mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46765.508mil|Location2.X=46786.92mil|Location1.Y=35878.426mil|Location2.Y=35909.036mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46765.508mil|Location2.X=46786.92mil|Location1.Y=35878.426mil|Location2.Y=35909.036mil|Absolute=True">Net Antennae: Track (-5.398mm,-11.801mm)(-5.385mm,-11.787mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46764.98mil|Location2.X=46786.392mil|Location1.Y=35877.899mil|Location2.Y=35908.508mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46764.98mil|Location2.X=46786.392mil|Location1.Y=35877.899mil|Location2.Y=35908.508mil|Absolute=True">Net Antennae: Track (-5.398mm,-12.001mm)(-5.398mm,-11.801mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46764.98mil|Location2.X=46786.392mil|Location1.Y=35870.025mil|Location2.Y=35900.634mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46764.98mil|Location2.X=46786.392mil|Location1.Y=35870.025mil|Location2.Y=35900.634mil|Absolute=True">Net Antennae: Track (-5.398mm,-12.001mm)(-5.398mm,-11.801mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46717.736mil|Location2.X=46739.148mil|Location1.Y=35955.627mil|Location2.Y=35986.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46717.736mil|Location2.X=46739.148mil|Location1.Y=35955.627mil|Location2.Y=35986.236mil|Absolute=True">Net Antennae: Track (-6.598mm,-10.676mm)(-6.598mm,-9.827mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46718.264mil|Location2.X=46739.676mil|Location1.Y=35967.627mil|Location2.Y=35998.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46718.264mil|Location2.X=46739.676mil|Location1.Y=35967.627mil|Location2.Y=35998.236mil|Absolute=True">Net Antennae: Track (-6.598mm,-9.508mm)(-6.585mm,-9.522mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46717.736mil|Location2.X=46739.148mil|Location1.Y=35968.155mil|Location2.Y=35998.764mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46717.736mil|Location2.X=46739.148mil|Location1.Y=35968.155mil|Location2.Y=35998.764mil|Absolute=True">Net Antennae: Track (-6.598mm,-9.508mm)(-6.585mm,-9.522mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.079mil|Location2.X=47371.491mil|Location1.Y=36434.581mil|Location2.Y=36465.19mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.079mil|Location2.X=47371.491mil|Location1.Y=36434.581mil|Location2.Y=36465.19mil|Absolute=True">Net Antennae: Track (9.213mm,2.339mm)(9.464mm,2.339mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.079mil|Location2.X=47371.491mil|Location1.Y=36434.581mil|Location2.Y=36465.19mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47350.079mil|Location2.X=47371.491mil|Location1.Y=36434.581mil|Location2.Y=36465.19mil|Absolute=True">Net Antennae: Track (9.464mm,2.339mm)(9.819mm,1.983mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47378.091mil|Location2.X=47399.502mil|Location1.Y=36406.57mil|Location2.Y=36437.179mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47378.091mil|Location2.X=47399.502mil|Location1.Y=36406.57mil|Location2.Y=36437.179mil|Absolute=True">Net Antennae: Track (9.819mm,1.983mm)(10.175mm,1.627mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46967.5mil|Location2.X=47016.124mil|Location1.Y=36805mil|Location2.Y=36880.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46967.5mil|Location2.X=47016.124mil|Location1.Y=36805mil|Location2.Y=36880.994mil|Absolute=True">Net Antennae: Via (0.064mm,12.065mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47005mil|Location2.X=47053.624mil|Location1.Y=36730mil|Location2.Y=36805.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47005mil|Location2.X=47053.624mil|Location1.Y=36730mil|Location2.Y=36805.994mil|Absolute=True">Net Antennae: Via (1.016mm,10.16mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47042.5mil|Location2.X=47091.124mil|Location1.Y=36805mil|Location2.Y=36880.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47042.5mil|Location2.X=47091.124mil|Location1.Y=36805mil|Location2.Y=36880.994mil|Absolute=True">Net Antennae: Via (1.968mm,12.065mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47377.933mil|Location2.X=47421.114mil|Location1.Y=36340.467mil|Location2.Y=36407.269mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47377.933mil|Location2.X=47421.114mil|Location1.Y=36340.467mil|Location2.Y=36407.269mil|Absolute=True">Net Antennae: Via (10.425mm,0.202mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47380mil|Location2.X=47428.624mil|Location1.Y=36730mil|Location2.Y=36805.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47380mil|Location2.X=47428.624mil|Location1.Y=36730mil|Location2.Y=36805.994mil|Absolute=True">Net Antennae: Via (10.541mm,10.16mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47380mil|Location2.X=47428.624mil|Location1.Y=36580mil|Location2.Y=36655.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47380mil|Location2.X=47428.624mil|Location1.Y=36580mil|Location2.Y=36655.994mil|Absolute=True">Net Antennae: Via (10.541mm,6.35mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47380.901mil|Location2.X=47424.083mil|Location1.Y=36785.776mil|Location2.Y=36852.578mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47380.901mil|Location2.X=47424.083mil|Location1.Y=36785.776mil|Location2.Y=36852.578mil|Absolute=True">Net Antennae: Via (10.5mm,11.513mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46517.5mil|Location2.X=46566.124mil|Location1.Y=35905mil|Location2.Y=35980.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46517.5mil|Location2.X=46566.124mil|Location1.Y=35905mil|Location2.Y=35980.994mil|Absolute=True">Net Antennae: Via (-11.367mm,-10.795mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46517.5mil|Location2.X=46566.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46517.5mil|Location2.X=46566.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True">Net Antennae: Via (-11.367mm,8.255mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47417.5mil|Location2.X=47466.124mil|Location1.Y=35905mil|Location2.Y=35980.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47417.5mil|Location2.X=47466.124mil|Location1.Y=35905mil|Location2.Y=35980.994mil|Absolute=True">Net Antennae: Via (11.493mm,-10.795mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47417.5mil|Location2.X=47466.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47417.5mil|Location2.X=47466.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True">Net Antennae: Via (11.493mm,-3.175mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47417.5mil|Location2.X=47466.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47417.5mil|Location2.X=47466.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True">Net Antennae: Via (11.493mm,8.255mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46480mil|Location2.X=46528.624mil|Location1.Y=36280mil|Location2.Y=36355.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46480mil|Location2.X=46528.624mil|Location1.Y=36280mil|Location2.Y=36355.994mil|Absolute=True">Net Antennae: Via (-12.319mm,-1.27mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46480mil|Location2.X=46528.624mil|Location1.Y=36130mil|Location2.Y=36205.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46480mil|Location2.X=46528.624mil|Location1.Y=36130mil|Location2.Y=36205.994mil|Absolute=True">Net Antennae: Via (-12.319mm,-5.08mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46480mil|Location2.X=46528.624mil|Location1.Y=35980mil|Location2.Y=36055.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46480mil|Location2.X=46528.624mil|Location1.Y=35980mil|Location2.Y=36055.994mil|Absolute=True">Net Antennae: Via (-12.319mm,-8.89mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47455mil|Location2.X=47503.624mil|Location1.Y=36280mil|Location2.Y=36355.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47455mil|Location2.X=47503.624mil|Location1.Y=36280mil|Location2.Y=36355.994mil|Absolute=True">Net Antennae: Via (12.446mm,-1.27mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47455mil|Location2.X=47503.624mil|Location1.Y=36580mil|Location2.Y=36655.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47455mil|Location2.X=47503.624mil|Location1.Y=36580mil|Location2.Y=36655.994mil|Absolute=True">Net Antennae: Via (12.446mm,6.35mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46442.5mil|Location2.X=46491.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46442.5mil|Location2.X=46491.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True">Net Antennae: Via (-13.271mm,-3.175mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46442.5mil|Location2.X=46491.124mil|Location1.Y=36505mil|Location2.Y=36580.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46442.5mil|Location2.X=46491.124mil|Location1.Y=36505mil|Location2.Y=36580.994mil|Absolute=True">Net Antennae: Via (-13.271mm,4.445mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46442.5mil|Location2.X=46491.124mil|Location1.Y=36055mil|Location2.Y=36130.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46442.5mil|Location2.X=46491.124mil|Location1.Y=36055mil|Location2.Y=36130.994mil|Absolute=True">Net Antennae: Via (-13.271mm,-6.985mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46442.5mil|Location2.X=46491.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46442.5mil|Location2.X=46491.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True">Net Antennae: Via (-13.271mm,8.255mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47492.5mil|Location2.X=47541.124mil|Location1.Y=36355mil|Location2.Y=36430.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47492.5mil|Location2.X=47541.124mil|Location1.Y=36355mil|Location2.Y=36430.994mil|Absolute=True">Net Antennae: Via (13.399mm,0.635mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47492.5mil|Location2.X=47541.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47492.5mil|Location2.X=47541.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True">Net Antennae: Via (13.399mm,-3.175mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47492.5mil|Location2.X=47541.124mil|Location1.Y=36505mil|Location2.Y=36580.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47492.5mil|Location2.X=47541.124mil|Location1.Y=36505mil|Location2.Y=36580.994mil|Absolute=True">Net Antennae: Via (13.399mm,4.445mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47492.5mil|Location2.X=47541.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47492.5mil|Location2.X=47541.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True">Net Antennae: Via (13.399mm,8.255mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46405mil|Location2.X=46453.624mil|Location1.Y=36430mil|Location2.Y=36505.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46405mil|Location2.X=46453.624mil|Location1.Y=36430mil|Location2.Y=36505.994mil|Absolute=True">Net Antennae: Via (-14.224mm,2.54mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46405mil|Location2.X=46453.624mil|Location1.Y=36130mil|Location2.Y=36205.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46405mil|Location2.X=46453.624mil|Location1.Y=36130mil|Location2.Y=36205.994mil|Absolute=True">Net Antennae: Via (-14.224mm,-5.08mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46405mil|Location2.X=46453.624mil|Location1.Y=36580mil|Location2.Y=36655.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46405mil|Location2.X=46453.624mil|Location1.Y=36580mil|Location2.Y=36655.994mil|Absolute=True">Net Antennae: Via (-14.224mm,6.35mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47530mil|Location2.X=47578.624mil|Location1.Y=36280mil|Location2.Y=36355.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47530mil|Location2.X=47578.624mil|Location1.Y=36280mil|Location2.Y=36355.994mil|Absolute=True">Net Antennae: Via (14.351mm,-1.27mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47530mil|Location2.X=47578.624mil|Location1.Y=36430mil|Location2.Y=36505.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47530mil|Location2.X=47578.624mil|Location1.Y=36430mil|Location2.Y=36505.994mil|Absolute=True">Net Antennae: Via (14.351mm,2.54mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47530mil|Location2.X=47578.624mil|Location1.Y=36130mil|Location2.Y=36205.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47530mil|Location2.X=47578.624mil|Location1.Y=36130mil|Location2.Y=36205.994mil|Absolute=True">Net Antennae: Via (14.351mm,-5.08mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47530mil|Location2.X=47578.624mil|Location1.Y=36580mil|Location2.Y=36655.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47530mil|Location2.X=47578.624mil|Location1.Y=36580mil|Location2.Y=36655.994mil|Absolute=True">Net Antennae: Via (14.351mm,6.35mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47567.5mil|Location2.X=47616.124mil|Location1.Y=36355mil|Location2.Y=36430.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47567.5mil|Location2.X=47616.124mil|Location1.Y=36355mil|Location2.Y=36430.994mil|Absolute=True">Net Antennae: Via (15.303mm,0.635mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47567.5mil|Location2.X=47616.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47567.5mil|Location2.X=47616.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True">Net Antennae: Via (15.303mm,-3.175mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47048.046mil|Location2.X=47091.228mil|Location1.Y=36676.455mil|Location2.Y=36743.257mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47048.046mil|Location2.X=47091.228mil|Location1.Y=36676.455mil|Location2.Y=36743.257mil|Absolute=True">Net Antennae: Via (2.046mm,8.736mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47050.221mil|Location2.X=47093.403mil|Location1.Y=36706.376mil|Location2.Y=36773.177mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47050.221mil|Location2.X=47093.403mil|Location1.Y=36706.376mil|Location2.Y=36773.177mil|Absolute=True">Net Antennae: Via (2.101mm,9.496mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47064.94mil|Location2.X=47108.121mil|Location1.Y=36651.477mil|Location2.Y=36718.279mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47064.94mil|Location2.X=47108.121mil|Location1.Y=36651.477mil|Location2.Y=36718.279mil|Absolute=True">Net Antennae: Via (2.475mm,8.102mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46855mil|Location2.X=46903.624mil|Location1.Y=36730mil|Location2.Y=36805.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46855mil|Location2.X=46903.624mil|Location1.Y=36730mil|Location2.Y=36805.994mil|Absolute=True">Net Antennae: Via (-2.794mm,10.16mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46855mil|Location2.X=46903.624mil|Location1.Y=35830mil|Location2.Y=35905.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46855mil|Location2.X=46903.624mil|Location1.Y=35830mil|Location2.Y=35905.994mil|Absolute=True">Net Antennae: Via (-2.794mm,-12.7mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46855mil|Location2.X=46903.624mil|Location1.Y=36130mil|Location2.Y=36205.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46855mil|Location2.X=46903.624mil|Location1.Y=36130mil|Location2.Y=36205.994mil|Absolute=True">Net Antennae: Via (-2.794mm,-5.08mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46855mil|Location2.X=46903.624mil|Location1.Y=35980mil|Location2.Y=36055.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46855mil|Location2.X=46903.624mil|Location1.Y=35980mil|Location2.Y=36055.994mil|Absolute=True">Net Antennae: Via (-2.794mm,-8.89mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46845mil|Location2.X=46893.624mil|Location1.Y=36075.079mil|Location2.Y=36151.073mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46845mil|Location2.X=46893.624mil|Location1.Y=36075.079mil|Location2.Y=36151.073mil|Absolute=True">Net Antennae: Via (-3.048mm,-6.475mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47090.5mil|Location2.X=47133.681mil|Location1.Y=36302.5mil|Location2.Y=36369.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47090.5mil|Location2.X=47133.681mil|Location1.Y=36302.5mil|Location2.Y=36369.302mil|Absolute=True">Net Antennae: Via (3.124mm,-0.762mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46837.579mil|Location2.X=46880.76mil|Location1.Y=36336.713mil|Location2.Y=36403.514mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46837.579mil|Location2.X=46880.76mil|Location1.Y=36336.713mil|Location2.Y=36403.514mil|Absolute=True">Net Antennae: Via (-3.3mm,0.107mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47102.966mil|Location2.X=47146.147mil|Location1.Y=36778.427mil|Location2.Y=36845.229mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47102.966mil|Location2.X=47146.147mil|Location1.Y=36778.427mil|Location2.Y=36845.229mil|Absolute=True">Net Antennae: Via (3.441mm,11.327mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47111.32mil|Location2.X=47154.501mil|Location1.Y=36646.476mil|Location2.Y=36713.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47111.32mil|Location2.X=47154.501mil|Location1.Y=36646.476mil|Location2.Y=36713.278mil|Absolute=True">Net Antennae: Via (3.653mm,7.975mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47127.337mil|Location2.X=47170.518mil|Location1.Y=36675.317mil|Location2.Y=36742.119mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47127.337mil|Location2.X=47170.518mil|Location1.Y=36675.317mil|Location2.Y=36742.119mil|Absolute=True">Net Antennae: Via (4.06mm,8.708mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46803.779mil|Location2.X=46852.403mil|Location1.Y=36030mil|Location2.Y=36105.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46803.779mil|Location2.X=46852.403mil|Location1.Y=36030mil|Location2.Y=36105.994mil|Absolute=True">Net Antennae: Via (-4.095mm,-7.62mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47129.67mil|Location2.X=47172.852mil|Location1.Y=36805.223mil|Location2.Y=36872.025mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47129.67mil|Location2.X=47172.852mil|Location1.Y=36805.223mil|Location2.Y=36872.025mil|Absolute=True">Net Antennae: Via (4.119mm,12.007mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47132.751mil|Location2.X=47175.932mil|Location1.Y=36224.232mil|Location2.Y=36291.034mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47132.751mil|Location2.X=47175.932mil|Location1.Y=36224.232mil|Location2.Y=36291.034mil|Absolute=True">Net Antennae: Via (4.197mm,-2.75mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47147.834mil|Location2.X=47191.015mil|Location1.Y=36697.223mil|Location2.Y=36764.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47147.834mil|Location2.X=47191.015mil|Location1.Y=36697.223mil|Location2.Y=36764.024mil|Absolute=True">Net Antennae: Via (4.58mm,9.264mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47172.081mil|Location2.X=47215.262mil|Location1.Y=36895.492mil|Location2.Y=36962.294mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47172.081mil|Location2.X=47215.262mil|Location1.Y=36895.492mil|Location2.Y=36962.294mil|Absolute=True">Net Antennae: Via (5.196mm,14.3mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47172.081mil|Location2.X=47215.262mil|Location1.Y=36720.309mil|Location2.Y=36787.111mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47172.081mil|Location2.X=47215.262mil|Location1.Y=36720.309mil|Location2.Y=36787.111mil|Absolute=True">Net Antennae: Via (5.196mm,9.85mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47174.913mil|Location2.X=47218.094mil|Location1.Y=36861.638mil|Location2.Y=36928.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47174.913mil|Location2.X=47218.094mil|Location1.Y=36861.638mil|Location2.Y=36928.44mil|Absolute=True">Net Antennae: Via (5.268mm,13.44mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46742.5mil|Location2.X=46791.124mil|Location1.Y=36055mil|Location2.Y=36130.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46742.5mil|Location2.X=46791.124mil|Location1.Y=36055mil|Location2.Y=36130.994mil|Absolute=True">Net Antennae: Via (-5.652mm,-6.985mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47197.186mil|Location2.X=47240.367mil|Location1.Y=36745.212mil|Location2.Y=36812.014mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47197.186mil|Location2.X=47240.367mil|Location1.Y=36745.212mil|Location2.Y=36812.014mil|Absolute=True">Net Antennae: Via (5.834mm,10.483mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47218.422mil|Location2.X=47261.603mil|Location1.Y=36766.403mil|Location2.Y=36833.204mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47218.422mil|Location2.X=47261.603mil|Location1.Y=36766.403mil|Location2.Y=36833.204mil|Absolute=True">Net Antennae: Via (6.373mm,11.021mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47251.814mil|Location2.X=47294.995mil|Location1.Y=36769.28mil|Location2.Y=36836.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47251.814mil|Location2.X=47294.995mil|Location1.Y=36769.28mil|Location2.Y=36836.082mil|Absolute=True">Net Antennae: Via (7.222mm,11.094mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46667.5mil|Location2.X=46716.124mil|Location1.Y=36805mil|Location2.Y=36880.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46667.5mil|Location2.X=46716.124mil|Location1.Y=36805mil|Location2.Y=36880.994mil|Absolute=True">Net Antennae: Via (-7.556mm,12.065mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46667.5mil|Location2.X=46716.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46667.5mil|Location2.X=46716.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True">Net Antennae: Via (-7.556mm,8.255mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46652.5mil|Location2.X=46695.681mil|Location1.Y=36372.067mil|Location2.Y=36438.869mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46652.5mil|Location2.X=46695.681mil|Location1.Y=36372.067mil|Location2.Y=36438.869mil|Absolute=True">Net Antennae: Via (-8.001mm,1.005mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47284.595mil|Location2.X=47327.776mil|Location1.Y=36760.363mil|Location2.Y=36827.165mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47284.595mil|Location2.X=47327.776mil|Location1.Y=36760.363mil|Location2.Y=36827.165mil|Absolute=True">Net Antennae: Via (8.054mm,10.868mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47292.303mil|Location2.X=47335.484mil|Location1.Y=36389.979mil|Location2.Y=36456.781mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47292.303mil|Location2.X=47335.484mil|Location1.Y=36389.979mil|Location2.Y=36456.781mil|Absolute=True">Net Antennae: Via (8.25mm,1.46mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46630mil|Location2.X=46678.624mil|Location1.Y=35830mil|Location2.Y=35905.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46630mil|Location2.X=46678.624mil|Location1.Y=35830mil|Location2.Y=35905.994mil|Absolute=True">Net Antennae: Via (-8.509mm,-12.7mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47318.568mil|Location2.X=47361.749mil|Location1.Y=36760.234mil|Location2.Y=36827.035mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47318.568mil|Location2.X=47361.749mil|Location1.Y=36760.234mil|Location2.Y=36827.035mil|Absolute=True">Net Antennae: Via (8.917mm,10.864mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46592.5mil|Location2.X=46641.124mil|Location1.Y=35905mil|Location2.Y=35980.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46592.5mil|Location2.X=46641.124mil|Location1.Y=35905mil|Location2.Y=35980.994mil|Absolute=True">Net Antennae: Via (-9.461mm,-10.795mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46592.5mil|Location2.X=46641.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=46592.5mil|Location2.X=46641.124mil|Location1.Y=36655mil|Location2.Y=36730.994mil|Absolute=True">Net Antennae: Via (-9.461mm,8.255mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47342.5mil|Location2.X=47391.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47342.5mil|Location2.X=47391.124mil|Location1.Y=36205mil|Location2.Y=36280.994mil|Absolute=True">Net Antennae: Via (9.588mm,-3.175mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47342.5mil|Location2.X=47391.124mil|Location1.Y=36055mil|Location2.Y=36130.994mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47342.5mil|Location2.X=47391.124mil|Location1.Y=36055mil|Location2.Y=36130.994mil|Absolute=True">Net Antennae: Via (9.588mm,-6.985mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47351.416mil|Location2.X=47394.597mil|Location1.Y=36768.901mil|Location2.Y=36835.703mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\DiaSemi\SDK\DA1468x_DA15xxx_SDK_1.0.14.1081\projects\dk_apps\ble_profiles\OpenWatch\PCB\Altium Files\smarchWatch_V5.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=47351.416mil|Location2.X=47394.597mil|Location1.Y=36768.901mil|Location2.Y=36835.703mil|Absolute=True">Net Antennae: Via (9.751mm,11.085mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
