@@ -2,22 +2,90 @@
 FileName = smarchWatch_V5.GBR
 AutoAperture = True
 *************************************************************
-Generating : Bottom Solder
-      File : smarchWatch_V5.GBS
+Generating : Top Solder
+      File : smarchWatch_V5.GTS
 
-    Adding Layer      : Bottom Solder
+    Adding Layer      : Top Solder
 
-    Adding Layer      : Bottom Layer
+    Adding Layer      : Top Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
+    D38
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
+    D56
+    D57
+    D58
+    D59
     D60
     D61
     D62
-    D84
-    D85
+    D63
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : smarchWatch_V5.GTO
+
+    Adding Layer      : Top Overlay
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+    D13
+    D14
+    D15
+*************************************************************
+
+*************************************************************
+Generating : Signal Layer 2
+      File : smarchWatch_V5.G2
+
+    Adding Layer      : Signal Layer 2
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D67
+    D68
+    D80
+*************************************************************
+
+*************************************************************
+Generating : Signal Layer 1
+      File : smarchWatch_V5.G1
+
+    Adding Layer      : Signal Layer 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D67
+    D73
+    D80
 *************************************************************
 
 *************************************************************
@@ -71,21 +139,6 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Signal Layer 1
-      File : smarchWatch_V5.G1
-
-    Adding Layer      : Signal Layer 1
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D67
-    D73
-    D80
-*************************************************************
-
-*************************************************************
 Generating : Bottom Layer
       File : smarchWatch_V5.GBL
 
@@ -112,6 +165,25 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
+Generating : Bottom Solder
+      File : smarchWatch_V5.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D60
+    D61
+    D62
+    D84
+    D85
+*************************************************************
+
+*************************************************************
 Generating : Bottom Paste
       File : smarchWatch_V5.GBP
 
@@ -125,6 +197,31 @@ Generating : Bottom Paste
 Used DCodes :
     D82
     D83
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : smarchWatch_V5.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D11
+    D15
+    D86
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : smarchWatch_V5.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D15
+    D87
 *************************************************************
 
 *************************************************************
@@ -161,102 +258,5 @@ Used DCodes :
     D35
     D36
     D37
-*************************************************************
-
-*************************************************************
-Generating : Top Overlay
-      File : smarchWatch_V5.GTO
-
-    Adding Layer      : Top Overlay
-
-
-Used DCodes :
-    D10
-    D11
-    D12
-    D13
-    D14
-    D15
-*************************************************************
-
-*************************************************************
-Generating : Keep-Out Layer
-      File : smarchWatch_V5.GKO
-
-    Adding Layer      : Keep-Out Layer
-
-
-Used DCodes :
-    D15
-    D87
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : smarchWatch_V5.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-    D11
-    D15
-    D86
-*************************************************************
-
-*************************************************************
-Generating : Signal Layer 2
-      File : smarchWatch_V5.G2
-
-    Adding Layer      : Signal Layer 2
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D14
-    D67
-    D68
-    D80
-*************************************************************
-
-*************************************************************
-Generating : Top Solder
-      File : smarchWatch_V5.GTS
-
-    Adding Layer      : Top Solder
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D38
-    D39
-    D40
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-    D57
-    D58
-    D59
-    D60
-    D61
-    D62
-    D63
 *************************************************************
 
