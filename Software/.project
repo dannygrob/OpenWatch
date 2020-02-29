@@ -99,6 +99,11 @@
 			<type>2</type>
 			<locationURI>SDKROOT/sdk/bsp/peripherals</locationURI>
 		</link>
+		<link>
+			<name>sdk/segger_tools</name>
+			<type>2</type>
+			<location>E:/DiaSemi/SDK/DA1468x_DA15xxx_SDK_1.0.14.1081/sdk/middleware/segger_tools</location>
+		</link>
 	</linkedResources>
 	<variableList>
 		<variable>

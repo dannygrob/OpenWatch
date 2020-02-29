@@ -36,6 +36,7 @@ bool            getImageLoaderComplete(void);
 #define UPDATE_ACCEL_MASK (1 << 4)
 #define CHARGE_STATE_MASK (1 << 6)
 #define UPDATE_TOUCH_MASK (1 << 7)
+#define UPDATE_WAKE_MASK (1 << 8)
 
 #define DISPLAY_ON_MASK 22
 #define DISPLAY_OFF_MASK 23

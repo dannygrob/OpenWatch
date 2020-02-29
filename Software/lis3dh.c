@@ -179,6 +179,8 @@ void i2c_init(void)
 
         ad_i2c_close(dev);
 
+        printf("lis3dh response");
+        printf(response);
         if (response == I_AM_LIS3DH) {
               //  enable(true);
                 //testConfig();

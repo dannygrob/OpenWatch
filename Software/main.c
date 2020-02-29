@@ -96,7 +96,7 @@ static void init_wakeup(void)
         hw_wkup_register_interrupt(wkup_handler, 1);
 }
 
-/**
+/**n
  * @brief System Initialization and creation of the BLE task
  */
 static void system_init( void *pvParameters )
@@ -137,6 +137,11 @@ static void system_init( void *pvParameters )
         /* init resources */
         resource_init();
 
+#if defined CONFIG_RTT
+        SEGGER_RTT_Init();
+#endif
+
+
 #if defined CONFIG_RETARGET
         retarget_init();
 #endif
@@ -175,17 +180,17 @@ static void system_init( void *pvParameters )
                                                               stack of the task. */
                        mainLIS3DH_TASK_PRIORITY,         /* The priority assigned to the task. */
                        handle2);                            /* The task handle. */
-//        OS_ASSERT(handle2);
+        OS_ASSERT(handle2);
 #endif
 //        /* Start the Touch application task. */
-        OS_TASK_CREATE("Touch Task",                     /* The text name assigned to the task, for                                                              debug only; not used by the kernel. */
-                       touch_task,                          /* The function that implements the task. */
-                       NULL,                               /* The parameter passed to the task. */
-                       1024,                               /* The number of bytes to allocate to the
-                                                              stack of the task. */
-                       mainTOUCH_TASK_PRIORITY,         /* The priority assigned to the task. */
-                       handle4);                            /* The task handle. */
-        OS_ASSERT(handle4);
+//        OS_TASK_CREATE("Touch Task",                     /* The text name assigned to the task, for                                                              debug only; not used by the kernel. */
+//                       touch_task,                          /* The function that implements the task. */
+//                       NULL,                               /* The parameter passed to the task. */
+//                       1024,                               /* The number of bytes to allocate to the
+//                                                              stack of the task. */
+//                       mainTOUCH_TASK_PRIORITY,         /* The priority assigned to the task. */
+//                       handle4);                            /* The task handle. */
+//        OS_ASSERT(handle4);
 
         /* Start the ANCS Profile application task. */
         OS_TASK_CREATE("ANCS Profile",                     /* The text name assigned to the task, for
@@ -201,6 +206,8 @@ static void system_init( void *pvParameters )
 
         /* the work of the SysInit task is done */
         OS_TASK_DELETE(OS_GET_CURRENT_TASK());
+
+
 }
 /*-----------------------------------------------------------*/
 

@@ -31,9 +31,11 @@
 
 #define CONFIG_BLE_STORAGE (1)
 
-#define DEVKIT_USB                              (1)
-#define CONFIG_RETARGET                         (1)
-#define CONFIG_RETARGET_UART    HW_UART2
+//#define DEVKIT_USB                              (1)
+//#define CONFIG_RETARGET                         (1)
+//#define CONFIG_RETARGET_UART    HW_UART2
+
+#define CONFIG_RTT
 
 #define dg_configTESTMODE_MEASURE_SLEEP_CURRENT (0)
 
@@ -63,7 +65,7 @@
 //
 #define dg_configBATTERY_TYPE                   (BATTERY_TYPE_LIMN2O4)
 #define dg_configBATTERY_CHARGE_CURRENT         3       // 30mA
-#define dg_configBATTERY_PRECHARGE_CURRENT      2      // 2.1mA
+#define dg_configBATTERY_PRECHARGE_CURRENT      20      // 2.1mA
 #define dg_configBATTERY_CHARGE_NTC             1       // disabled
 
 

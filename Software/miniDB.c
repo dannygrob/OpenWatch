@@ -100,4 +100,3 @@ void initLogging() {
         ad_uart_init();
         uartDev = ad_uart_open(SERIAL1);
 }
-

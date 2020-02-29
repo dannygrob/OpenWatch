@@ -33,12 +33,10 @@ static void on_timer_cb(OS_TIMER timer)
         if (cts_time.date_time.seconds > 59) {
                 cts_time.date_time.seconds -= 60;
                 cts_time.date_time.minutes += 1;
-               // OS_TASK_NOTIFY(getDisplayTaskHandle(), SET_TIME_NOTIF, eSetBits);
         }
         if (cts_time.date_time.minutes > 59) {
                 cts_time.date_time.minutes -= 60;
                 cts_time.date_time.hours += 1;
-             //   OS_TASK_NOTIFY(getDisplayTaskHandle(), SET_TIME_NOTIF, eSetBits);
         }
         if (cts_time.date_time.hours > 23) {
                 cts_time.date_time.hours -= 24;
